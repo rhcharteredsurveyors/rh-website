@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== PRIVACY PAGE - same family pattern as Compliance ===== */
+  .legal-section {
+    padding: 80px 48px;
+    background: var(--paper);
+  }
+  .legal-section:nth-of-type(even) {
+    background: var(--cream);
+  }
+  .legal-section + .legal-section {
+    border-top: 1px solid var(--grey-300);
+  }
+  .legal-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .legal-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+  .legal-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .legal-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .legal-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .legal-content {
+    max-width: 720px;
+  }
+  .legal-content h3 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.4vw, 32px);
+    line-height: 1.2;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    margin-bottom: 24px;
+  }
+  .legal-content h3 em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .legal-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--grey-700);
+    margin-bottom: 20px;
+  }
+  .legal-content p:last-child {
+    margin-bottom: 0;
+  }
+  .legal-content strong {
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .legal-content a {
+    color: var(--terracotta);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .legal-content a:hover {
+    color: var(--navy);
+  }
+  .legal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  .legal-content ul li {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--grey-700);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--grey-300);
+    display: grid;
+    grid-template-columns: 24px 200px 1fr;
+    align-items: start;
+    gap: 16px;
+  }
+  .legal-content ul li:last-child {
+    border-bottom: none;
+  }
+  .legal-content ul li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    flex-shrink: 0;
+    align-self: start;
+    margin-top: 10px;
+  }
+  .legal-content ul li strong {
+    color: var(--navy);
+    font-weight: 500;
+  }
+  /* For simple list items without a label */
+  .legal-content ul li.simple {
+    grid-template-columns: 24px 1fr;
+  }
+  @media (max-width: 768px) {
+    .legal-content ul li {
+      grid-template-columns: 18px 1fr;
+      gap: 12px;
+    }
+    .legal-content ul li strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+  .last-updated {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--navy-soft);
+    margin-top: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .legal-row {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .legal-label::before {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="landlord.html">Services</a>
+    <a href="properties.html">Properties</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Privacy Policy</span>
+    </div>
+    <div class="hero-eyebrow">Data &amp; privacy</div>
+    <h1 class="hero-headline">Privacy <em>Policy.</em></h1>
+    <p class="hero-sub">
+      How RH Chartered Surveyors collects, uses, and protects your personal information.<br>
+      <em>Plain English. No surprises.</em>
+    </p>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        01 · Overview
+        <div class="legal-label-sub">Who this applies to.</div>
+      </div>
+      <div class="legal-content">
+        <h3>About this <em>policy.</em></h3>
+        <p>
+          This Privacy Policy explains how <strong>RH Chartered Surveyors</strong> (a trading name of Haigh &amp; Haigh Properties Limited, company number 12302429) collects, uses, stores, and protects personal information.
+        </p>
+        <p>
+          It applies to anyone who interacts with the practice, including clients, prospective clients, suppliers, and visitors to this website. We process personal data in accordance with the <strong>UK General Data Protection Regulation (UK GDPR)</strong> and the <strong>Data Protection Act 2018</strong>.
+        </p>
+        <p class="last-updated">Last updated: May 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA CONTROLLER -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        02 · Controller
+        <div class="legal-label-sub">Who is responsible.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Data <em>controller.</em></h3>
+        <p>
+          The data controller responsible for your personal information is:
+        </p>
+        <p>
+          <strong>Haigh &amp; Haigh Properties Limited</strong><br>
+          trading as RH Chartered Surveyors<br>
+          12A Southwell Business Centre, Crew Lane,<br>
+          Southwell, Nottinghamshire NG25 0TX
+        </p>
+        <p>
+          For any data protection enquiries, please email <a href="mailto:rob@rhcharteredsurveyors.co.uk?subject=Data Subject Request">rob@rhcharteredsurveyors.co.uk</a> with "Data Subject Request" in the subject line.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA WE COLLECT -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        03 · Data collected
+        <div class="legal-label-sub">What we hold.</div>
+      </div>
+      <div class="legal-content">
+        <h3>What information <em>we collect.</em></h3>
+        <p>
+          The practice collects only the personal information necessary to deliver professional services and meet regulatory obligations. This typically includes:
+        </p>
+        <ul>
+          <li><strong>Contact information</strong><span>name, postal address, email address, and telephone number provided by clients, prospects, or suppliers.</span></li>
+          <li><strong>Professional information</strong><span>details of properties, leases, tenancies, valuations, and other matters relevant to the work being undertaken.</span></li>
+          <li><strong>Financial information</strong><span>limited to information necessary for the conduct of professional services, such as rateable values, rents, or transaction details.</span></li>
+          <li><strong>Identity verification</strong><span>documents and information collected to satisfy Anti-Money Laundering (AML) and Know Your Client (KYC) requirements.</span></li>
+          <li><strong>Correspondence</strong><span>emails, messages, and other written communications between the practice and clients or third parties.</span></li>
+        </ul>
+        <p>
+          The website does not currently use cookies, tracking, or analytics. If this changes in future, this policy will be updated and appropriate consent mechanisms put in place.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE USE IT -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        04 · Purpose
+        <div class="legal-label-sub">Why we use it.</div>
+      </div>
+      <div class="legal-content">
+        <h3>How information <em>is used.</em></h3>
+        <p>
+          Personal information is used only for the purposes for which it was collected. These purposes include:
+        </p>
+        <ul>
+          <li class="simple">Providing the professional services agreed with the client</li>
+          <li class="simple">Communicating with clients, prospects, and other parties involved in a matter</li>
+          <li class="simple">Issuing invoices and managing accounting records</li>
+          <li class="simple">Complying with regulatory obligations, including those of RICS and HMRC</li>
+          <li class="simple">Conducting AML and conflict-of-interest checks before accepting instructions</li>
+          <li class="simple">Maintaining records required by professional standards or law</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAWFUL BASIS -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        05 · Lawful basis
+        <div class="legal-label-sub">Legal grounds for processing.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Why this is <em>lawful.</em></h3>
+        <p>
+          Under the UK GDPR, the practice must have a lawful basis for processing personal data. We rely on the following:
+        </p>
+        <ul>
+          <li><strong>Performance of a contract</strong><span>for processing data necessary to deliver agreed professional services to clients.</span></li>
+          <li><strong>Legal obligation</strong><span>for processing required by law, including AML/KYC checks under the Money Laundering Regulations 2017 and tax record-keeping under HMRC requirements.</span></li>
+          <li><strong>Legitimate interests</strong><span>for operational matters such as responding to enquiries, maintaining records of past instructions, and protecting the practice in the event of a dispute. The practice's interests are balanced against the rights and freedoms of the data subject.</span></li>
+          <li><strong>Consent</strong><span>where applicable, for any optional communications such as newsletters or marketing (none currently active).</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THIRD PARTIES -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        06 · Sharing
+        <div class="legal-label-sub">Who else sees the data.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Sharing with <em>third parties.</em></h3>
+        <p>
+          Personal data is not sold, rented, or shared for marketing purposes. It may be shared with the following categories of recipients, only where necessary and with appropriate safeguards in place:
+        </p>
+        <ul>
+          <li><strong>Professional advisors</strong><span>solicitors, accountants, planning consultants, or other surveyors instructed on the same matter, where coordination is required.</span></li>
+          <li><strong>Regulatory and tax bodies</strong><span>HMRC, RICS, and other authorities where required by law.</span></li>
+          <li><strong>AML verification providers</strong><span>third-party services used to conduct identity and beneficial ownership checks, where applicable.</span></li>
+          <li><strong>Joint agents</strong><span>where the practice acts jointly with another firm on a marketing instruction or transaction.</span></li>
+          <li><strong>IT and service providers</strong><span>including email, cloud storage, and document management providers, all bound by appropriate data processing agreements.</span></li>
+        </ul>
+        <p>
+          The practice does not transfer personal data outside the UK or European Economic Area unless adequate protections are in place.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RETENTION -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        07 · Retention
+        <div class="legal-label-sub">How long data is kept.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Data <em>retention.</em></h3>
+        <p>
+          Personal data is retained only for as long as necessary to fulfil the purposes for which it was collected and to meet regulatory obligations. The standard retention period for client files is <strong>six years from the end of the engagement</strong>, in line with RICS guidance and the limitation period for contract claims.
+        </p>
+        <p>
+          AML records are retained for a minimum of five years from the end of the business relationship, as required by the Money Laundering Regulations 2017. Records required for tax purposes are retained in accordance with HMRC requirements.
+        </p>
+        <p>
+          After the retention period expires, data is securely deleted or anonymised.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR RIGHTS -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        08 · Your rights
+        <div class="legal-label-sub">What you can request.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Your <em>rights.</em></h3>
+        <p>
+          Under the UK GDPR, you have the following rights in relation to your personal data:
+        </p>
+        <ul>
+          <li><strong>Right of access</strong><span>to request a copy of the personal data held about you.</span></li>
+          <li><strong>Right of rectification</strong><span>to ask for inaccurate or incomplete data to be corrected.</span></li>
+          <li><strong>Right of erasure</strong><span>to request deletion of your data, subject to legal or regulatory retention requirements.</span></li>
+          <li><strong>Right to restrict processing</strong><span>to limit how your data is used in certain circumstances.</span></li>
+          <li><strong>Right to data portability</strong><span>to receive your data in a structured, machine-readable format.</span></li>
+          <li><strong>Right to object</strong><span>to processing based on legitimate interests, including any direct marketing.</span></li>
+          <li><strong>Right to withdraw consent</strong><span>where processing is based on consent, you can withdraw that consent at any time.</span></li>
+        </ul>
+        <p>
+          To exercise any of these rights, email <a href="mailto:rob@rhcharteredsurveyors.co.uk?subject=Data Subject Request">rob@rhcharteredsurveyors.co.uk</a> with "Data Subject Request" in the subject line. The practice will respond within <strong>one calendar month</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        09 · Security
+        <div class="legal-label-sub">How data is protected.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Data <em>security.</em></h3>
+        <p>
+          Appropriate technical and organisational measures are in place to protect personal data against unauthorised access, loss, alteration, or disclosure. This includes secure passwords, encryption where appropriate, restricted access to client files, and the use of reputable IT and cloud service providers.
+        </p>
+        <p>
+          In the unlikely event of a data breach affecting personal data, the practice will assess and respond in line with UK GDPR requirements, including notifying affected individuals and the Information Commissioner's Office where required.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLAINTS -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        10 · Complaints
+        <div class="legal-label-sub">If you're unhappy.</div>
+      </div>
+      <div class="legal-content">
+        <h3>How to <em>complain.</em></h3>
+        <p>
+          If you have any concerns about how your personal data has been handled, please contact me directly in the first instance at <a href="mailto:rob@rhcharteredsurveyors.co.uk">rob@rhcharteredsurveyors.co.uk</a>. Most concerns can be resolved quickly through direct conversation.
+        </p>
+        <p>
+          You also have the right to lodge a complaint with the <strong>Information Commissioner's Office (ICO)</strong>, the UK supervisory authority for data protection matters. The ICO can be contacted at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a> or by calling 0303 123 1113.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHANGES -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        11 · Updates
+        <div class="legal-label-sub">Changes to this policy.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Changes to <em>this policy.</em></h3>
+        <p>
+          This Privacy Policy may be updated from time to time to reflect changes in how the practice processes personal data, or in response to changes in law or regulatory guidance. The latest version will always be available on this page, with the "last updated" date at the top of this policy.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Questions about your data?</div>
+    <h2 class="cta-title">Just <em>ask.</em></h2>
+    <p class="cta-sub">
+      If anything on this page is unclear, or you want to know exactly what we hold about you, get in touch directly.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk?subject=Data Subject Request" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li class="simple"><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li class="simple"><a href="acquisitions.html">Acquisitions</a></li>
+          <li class="simple"><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li class="simple"><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li class="simple"><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li class="simple"><a href="disputes.html">Landlord &amp; Tenant Disputes</a></li>
+          <li class="simple"><a href="business-rates.html">Business Rates Appeals &amp; Mitigation</a></li>
+          <li class="simple"><a href="valuations.html">Property Valuations</a></li>
+          <li class="simple"><a href="property-management.html">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li class="simple"><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li class="simple"><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li class="simple"><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li class="simple"><a href="disputes-tenant.html">Landlord &amp; Tenant Disputes</a></li>
+          <li class="simple"><a href="business-rates-tenant.html">Business Rates Appeals &amp; Mitigation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li class="simple"><a href="about.html">About Rob</a></li>
+          <li class="simple"><a href="insights.html">Insights</a></li>
+          <li class="simple"><a href="properties.html">Properties</a></li>
+          <li class="simple"><a href="compliance.html">Compliance</a></li>
+          <li class="simple"><a href="privacy.html">Privacy</a></li>
+          <li class="simple"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

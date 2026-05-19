@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lease Acquisitions & Exits — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== Page-specific overrides ===== */
+  
+  /* "Common situations" grid - 2x3 grid of scenarios with prose under each */
+  .situations {
+    padding: 110px 48px;
+    background: var(--navy);
+    color: var(--paper);
+  }
+  .situations-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .situations-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    margin-bottom: 80px;
+    align-items: end;
+  }
+  .situations-title {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    font-weight: 500;
+  }
+  .situations-title em {
+    font-style: italic;
+    color: var(--terracotta-soft);
+  }
+  .situations-intro {
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.55;
+    color: rgba(245, 241, 235, 0.8);
+    font-style: italic;
+    padding-bottom: 12px;
+  }
+  .situations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(245, 241, 235, 0.2);
+  }
+  .situation-item {
+    padding: 48px 32px 48px 0;
+    border-bottom: 1px solid rgba(245, 241, 235, 0.2);
+    border-right: 1px solid rgba(245, 241, 235, 0.2);
+  }
+  .situation-item:nth-child(3n) {
+    border-right: none;
+  }
+  .situation-num {
+    font-family: var(--serif);
+    font-size: 13px;
+    color: var(--terracotta-soft);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .situation-name {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+  }
+  .situation-name em {
+    font-style: italic;
+    color: var(--terracotta-soft);
+  }
+  .situation-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(245, 241, 235, 0.78);
+    font-weight: 300;
+  }
+  @media (max-width: 1024px) {
+    .situations-header { grid-template-columns: 1fr; gap: 40px; }
+    .situations-grid { grid-template-columns: 1fr 1fr; }
+    .situation-item:nth-child(3n) { border-right: 1px solid rgba(245, 241, 235, 0.2); }
+    .situation-item:nth-child(2n) { border-right: none; }
+  }
+  @media (max-width: 640px) {
+    .situations { padding-left: 24px; padding-right: 24px; }
+    .situations-grid { grid-template-columns: 1fr; }
+    .situation-item { border-right: none !important; padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="tenant.html" class="active">Services</a>
+    <a href="index.html#properties">Properties</a>
+    <a href="index.html#insights">Insights</a>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="tenant.html">Tenant Advice</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Lease Acquisitions & Exits</span>
+    </div>
+    <div class="hero-eyebrow">Tenant Service · 02</div>
+    <h1 class="hero-headline">Lease Acquisitions<br>& <em>Exits.</em></h1>
+    <p class="hero-sub">
+      Taking on a lease or exiting one are the moments when years of cost, flexibility, and risk are <em>locked in.</em> Getting the detail right protects a tenant's position for years afterwards.
+    </p>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="case-studies">
+  <div class="case-studies-inner">
+    <div class="case-studies-header">
+      <div>
+        <div class="case-studies-label">Recent instructions</div>
+        <h2 class="case-studies-title">Real exits, <em>real savings.</em></h2>
+      </div>
+      <p class="case-studies-intro">Three recent tenant instructions across acquisitions, surrenders, and landlord-initiated lease exits.</p>
+    </div>
+    <div class="case-studies-grid">
+
+      <a href="case-crown-inn-surrender.html" class="case-study">
+        <div class="case-study-image">
+          <div>
+            <div class="tile-eyebrow">Settlement</div>
+            <div class="tile-number"><em>£41,200</em></div>
+            <div class="tile-result-label">final exit cost</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Against potential exposure exceeding £200,000 in rent, dilapidations &amp; outgoings</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Surrender Negotiation · Leisure</div>
+        <h3 class="case-study-title">The Crown Inn</h3>
+        <p class="case-study-summary">Negotiated an early surrender on a lease with substantial unexpired term, delivering a clean and enforceable exit.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-rag-market-birmingham.html" class="case-study">
+        <div class="case-study-image cream-tile">
+          <div>
+            <div class="tile-eyebrow">Re-positioned</div>
+            <div class="tile-number"><em>Their cost</em></div>
+            <div class="tile-result-label">fees covered, compensation pursued</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Landlord seeking early possession for redevelopment, tenant's actual entitlements unlocked</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Landlord-Initiated Exit · Retail</div>
+        <h3 class="case-study-title">Unit 9, Rag Market, Birmingham</h3>
+        <p class="case-study-summary">Turned a forced exit into a controlled negotiation by re-positioning the situation around the tenant's entitlements.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-dp-news.html" class="case-study">
+        <div class="case-study-image">
+          <div>
+            <div class="tile-eyebrow">Rent Reduction</div>
+            <div class="tile-number"><em>20% off</em></div>
+            <div class="tile-result-label">+ legal costs cut by two-thirds</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Rent reduced from £15,000 to £12,000 in a declining retail centre, keeping the business viable</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Lease Restructure · Retail</div>
+        <h3 class="case-study-title">DP News, Hillsborough</h3>
+        <p class="case-study-summary">Introduced a solicitor from our network to cut the landlord's legal cost quote by two-thirds, on top of the rent reduction.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTRO / WHAT THIS WORK INVOLVES -->
+<section class="intro">
+  <div class="intro-inner">
+    <div class="intro-label">
+      What this work involves
+      <div class="intro-label-sub">Honest reading of the situation.</div>
+    </div>
+    <div class="intro-prose">
+      <p class="lead">Lease events sit on a spectrum.<br>Some are clean. <em>Others carry hidden cost, or hidden opportunity.</em></p>
+      <p>
+        Some lease events are straightforward: you've found premises and need someone to negotiate the lease properly, or your break clause aligns with your plans and the job is exiting cleanly. Those are good days.
+      </p>
+      <p>
+        Others carry risk you might not have spotted: a deal with <strong>dilapidations exposure you haven't accounted for</strong>, a break clause whose conditions could void the notice if missed, a surrender priced well above what a properly negotiated exit would actually cost.
+      </p>
+      <p class="emphasis">
+        My job is to read the situation honestly, tell you plainly where the risks and opportunities sit, and handle the negotiation so you're not navigating it alone.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who">
+  <div class="who-inner">
+    <div class="who-label">
+      Who this is for
+      <div class="who-label-sub">Tenants at a lease event.</div>
+    </div>
+    <div class="who-prose">
+      <p>
+        Businesses taking on new premises and wanting someone to negotiate the lease properly before they sign. Tenants with a break clause coming up who want to make sure they exercise it correctly. Anyone facing an early exit, or being approached for one, and wanting to know what it should actually cost.
+      </p>
+      <p>
+        If you're at a lease event and you're not sure what you're entitled to, <strong>get in touch.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON SITUATIONS — 6 scenarios -->
+<section class="situations">
+  <div class="situations-inner">
+    <div class="situations-header">
+      <h2 class="situations-title">Common situations I'm <em>instructed on.</em></h2>
+      <p class="situations-intro">Acquisitions and exits look very different depending on the circumstances. These are the six scenarios I'm most often instructed on.</p>
+    </div>
+    <div class="situations-grid">
+
+      <div class="situation-item">
+        <div class="situation-num">01</div>
+        <div class="situation-name">Taking on a <em>new lease.</em></div>
+        <div class="situation-desc">The lease you sign today shapes your cost base and your flexibility for years. I'll review the proposed terms before you commit, negotiate rent and incentives properly, push for the flexibility your business will need in three years' time, and see it through to signed lease without loose ends.</div>
+      </div>
+
+      <div class="situation-item">
+        <div class="situation-num">02</div>
+        <div class="situation-name">Exercising a <em>break clause.</em></div>
+        <div class="situation-desc">Breaks fail on technicalities more often than on strategy: notice period, rent paid to date, vacant possession conditions. One missed condition and you're tied in for the remainder of the term. I'll work through the lease properly, get the notice and the compliance right, and exit you cleanly.</div>
+      </div>
+
+      <div class="situation-item">
+        <div class="situation-num">03</div>
+        <div class="situation-name">Regearing a lease <em>mid-term.</em></div>
+        <div class="situation-desc">Sometimes the right answer isn't exiting. It's reshaping the deal in place. A regear typically trades a rent reduction or restructure against something the landlord values: a longer term, the removal of a break clause, redevelopment rights. Done properly, both sides come away with something they wanted.</div>
+      </div>
+
+      <div class="situation-item">
+        <div class="situation-num">04</div>
+        <div class="situation-name">Negotiating an <em>early surrender.</em></div>
+        <div class="situation-desc">Sometimes the right outcome is leaving early and paying a sensible figure to do so. Surrender negotiations often open at numbers well above what a properly represented tenant would pay. Getting the figure right can save tens of thousands.</div>
+      </div>
+
+      <div class="situation-item">
+        <div class="situation-num">05</div>
+        <div class="situation-name">Where the landlord wants <em>possession back.</em></div>
+        <div class="situation-desc">If a landlord is approaching you to surrender early (typically for redevelopment or their own use), the situation is different. They usually cover legal and surveyor fees, and you may be entitled to compensation. Tenants regularly accept these approaches without realising what they're entitled to. Get advice before you agree to anything.</div>
+      </div>
+
+      <div class="situation-item">
+        <div class="situation-num">06</div>
+        <div class="situation-name">Assignment or <em>sub-letting.</em></div>
+        <div class="situation-desc">When you need to pass the lease on rather than break it, I'll handle the negotiation with the landlord, the documentation, and the relationship with the incoming party.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Start the conversation</div>
+    <h2 class="cta-title">Tell me about <em>your lease event.</em></h2>
+    <p class="cta-sub">
+      Whether you're looking at a new lease, facing a break clause, or weighing up an exit, tell me the situation and we'll work out whether I can help. Call, email, or WhatsApp.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="#">Strategic Asset Management</a></li>
+          <li><a href="#">Acquisitions</a></li>
+          <li><a href="#">Sales & Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals & Rent Reviews</a></li>
+          <li><a href="#">Valuations</a></li>
+          <li><a href="#">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals & Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions & Exits</a></li>
+          <li><a href="#">Strategic Reviews</a></li>
+          <li><a href="#">Disputes</a></li>
+          <li><a href="#">Business Rates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Properties</a></li>
+          <li><a href="#">Compliance</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh & Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

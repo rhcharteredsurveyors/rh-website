@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DP News Sheffield — Case Study — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== CASE STUDY PAGE ===== */
+
+  /* EDITORIAL HERO — matches service page hero pattern */
+  /* Uses the global .hero style from style.css, plus a few tweaks below */
+  .case-hero-tag {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .case-hero-tag::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .case-hero-summary {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 2vw, 24px);
+    line-height: 1.5;
+    color: var(--navy-soft);
+    max-width: 720px;
+    margin-top: 32px;
+    letter-spacing: -0.2px;
+  }
+  .case-hero-summary em {
+    color: var(--terracotta);
+  }
+
+  /* ===== KEY METRICS ===== */
+  .case-metrics {
+    padding: 80px 48px;
+    background: var(--paper);
+  }
+  .case-metrics-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .case-metrics-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+  .case-metrics-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .case-metrics-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .case-metrics-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .case-metrics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 48px;
+  }
+  .case-metrics-list li {
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--navy);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--grey-300);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    letter-spacing: -0.2px;
+  }
+  .case-metrics-list li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    flex-shrink: 0;
+    margin-top: 10px;
+  }
+
+  /* ===== STORY SECTIONS (Overview / Our Role / Outcome) ===== */
+  .case-story {
+    padding: 90px 48px;
+    background: var(--paper);
+  }
+  .case-story:nth-of-type(odd) {
+    background: var(--cream);
+    border-top: 1px solid var(--grey-300);
+  }
+  .case-story-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .case-story-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+  .case-story-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .case-story-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .case-story-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .case-story-content {
+    max-width: 720px;
+  }
+  .case-story-title {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.15;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    margin-bottom: 32px;
+  }
+  .case-story-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .case-story-content p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--grey-700);
+    margin-bottom: 22px;
+  }
+  .case-story-content p:last-child {
+    margin-bottom: 0;
+  }
+  .case-story-content strong {
+    color: var(--navy);
+    font-weight: 500;
+  }
+
+  /* ===== BACK TO SERVICE ===== */
+  .case-related-service {
+    padding: 60px 48px 80px;
+    background: var(--paper);
+    text-align: center;
+  }
+  .case-related-service-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .case-related-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 32px;
+    background: transparent;
+    border: 1px solid var(--navy);
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  .case-related-button:hover {
+    background: var(--navy);
+    color: var(--cream);
+  }
+  .case-related-button-arrow-back {
+    transition: transform 0.3s ease;
+  }
+  .case-related-button:hover .case-related-button-arrow-back {
+    transform: translateX(-6px);
+  }
+
+  @media (max-width: 1024px) {
+    .case-metrics-row,
+    .case-story-row {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .case-metrics-label::before,
+    .case-story-label::before {
+      display: none;
+    }
+    .case-metrics-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="landlord.html">Services</a>
+    <a href="properties.html">Properties</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="disputes-tenant.html">Landlord &amp; Tenant Disputes (Tenant)</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Case Study</span>
+    </div>
+    <div class="hero-eyebrow">Case Study · Landlord Negotiation</div>
+    <h1 class="hero-headline">DP News, <em>Sheffield.</em></h1>
+    <p class="hero-sub">
+      A tenant trapped in a declining shopping centre and an institutional landlord disinclined to engage. <em>Protracted negotiations resolved without escalation</em>, securing a 20% rent reduction and a Deed of Variation.
+    </p>
+  </div>
+</section>
+
+<!-- KEY METRICS -->
+<section class="case-metrics">
+  <div class="case-metrics-inner">
+    <div class="case-metrics-row">
+      <div class="case-metrics-label">
+        At a glance
+        <div class="case-metrics-label-sub">Key facts &amp; figures.</div>
+      </div>
+      <ul class="case-metrics-list">
+        <li>Retail unit at Hillsborough Shopping Centre, Sheffield</li>
+        <li>Tenant facing trading conditions in decline</li>
+        <li>Institutional landlord, reluctant to concede</li>
+        <li>Negotiations protracted but resolved without proceedings</li>
+        <li>Rent reduced from £15,000 to £12,000 per annum</li>
+        <li>Deed of Variation agreed on personal basis</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="case-story">
+  <div class="case-story-inner">
+    <div class="case-story-row">
+      <div class="case-story-label">
+        01 · Overview
+        <div class="case-story-label-sub">The instruction context.</div>
+      </div>
+      <div class="case-story-content">
+        <h2 class="case-story-title">The <em>dispute.</em></h2>
+<p>
+          DP News, trading from <strong>Unit 14-3 at Hillsborough Shopping Centre, Sheffield</strong>, found itself in an increasingly difficult position. Footfall through the centre had declined materially as vacancy levels increased. The business was becoming unsustainable at the existing rent.
+        </p>
+        <p>
+          The challenge wasn't identifying the problem. The challenge was getting an <strong>institutional landlord with no incentive to engage</strong> to acknowledge it.
+        </p>
+        <p>
+          The client came to me knowing the conversation with the landlord wasn't going to be straightforward, and wanting someone to lead it.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR ROLE -->
+<section class="case-story">
+  <div class="case-story-inner">
+    <div class="case-story-row">
+      <div class="case-story-label">
+        02 · Our role
+        <div class="case-story-label-sub">What I did.</div>
+      </div>
+      <div class="case-story-content">
+        <h2 class="case-story-title">Where the dispute <em>actually was.</em></h2>
+<p>
+          A request for a rent reduction outside a formal lease event is, in practice, a dispute waiting to happen. Landlords resist them on principle. The wider context of the shopping centre's performance gave the client a strong factual position, but a strong factual position doesn't move an institutional landlord on its own.
+        </p>
+        <p>
+          I approached the negotiation on two fronts. First, I built the <strong>commercial case methodically</strong>: vacancy data, footfall trends, comparable evidence, and the tenant's trading position, and put it to the landlord clearly enough that ignoring it stopped being a comfortable option.
+        </p>
+        <p>
+          Second, when the landlord's solicitors quoted excessive fees for documenting any agreement, I raised this as a separate issue. There's a pattern in these matters where landlords use legal costs to <strong>tax tenants out of pursuing a deal that should have been struck on commercial terms</strong>. I introduced a solicitor from my network to act efficiently, and the legal cost piece resolved alongside the rent.
+        </p>
+        <p>
+          Negotiations were protracted and required careful handling at multiple turning points. The aim throughout was to <strong>resolve without escalation</strong>, protecting the tenancy relationship while moving the landlord to a commercially defensible position.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOME -->
+<section class="case-story">
+  <div class="case-story-inner">
+    <div class="case-story-row">
+      <div class="case-story-label">
+        03 · Outcome
+        <div class="case-story-label-sub">What the client got.</div>
+      </div>
+      <div class="case-story-content">
+        <h2 class="case-story-title">How it <em>resolved.</em></h2>
+<p>
+          A Deed of Variation was agreed reducing the rent from £15,000 to <strong>£12,000 per annum</strong>, on a personal basis, meaning the landlord retained their investment position while the current tenant could continue trading.
+        </p>
+        <p>
+          Legal costs were reduced to approximately one-third of the original quote, removing what could have been a deal-breaker on its own.
+        </p>
+        <p>
+          No proceedings, no formal escalation. <strong>A protracted but contained dispute, settled.</strong> The client retained the premises and continued operating in conditions that would have otherwise forced an exit.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BACK TO SERVICE -->
+<section class="case-related-service">
+  <div class="case-related-service-inner">
+    <a href="disputes-tenant.html" class="case-related-button">
+      <span class="case-related-button-arrow-back">←</span>
+      Back to Landlord & Tenant Disputes (Tenant)
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Start the conversation</div>
+    <h2 class="cta-title">Got a similar <em>situation?</em></h2>
+    <p class="cta-sub">
+      If you're facing a similar matter and want a plain read on where you stand, get in touch. No obligation, no engagement letter at the end of the call. Just a conversation.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="disputes.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates.html">Business Rates Appeals &amp; Mitigation</a></li>
+          <li><a href="valuations.html">Property Valuations</a></li>
+          <li><a href="property-management.html">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates Appeals &amp; Mitigation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="engagement.html">Engagement</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Valuations — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== Page-specific overrides ===== */
+
+  /* 2x2 case study grid - constrained width so cards don't dominate */
+  @media (min-width: 1025px) {
+    .case-studies-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 56px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+  /* "Written for you, not a lender's file" — cream pause section */
+  .honest {
+    padding: 110px 48px;
+    background: var(--cream);
+  }
+  .honest-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .honest-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .honest-label::before,
+  .honest-label::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .honest-title {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.15;
+    color: var(--navy);
+    letter-spacing: -0.8px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  .honest-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .honest-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.6;
+    color: var(--navy-soft);
+    max-width: 760px;
+    margin: 0 auto;
+    letter-spacing: -0.2px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="landlord.html" class="active">Services</a>
+    <a href="index.html#properties">Properties</a>
+    <a href="index.html#insights">Insights</a>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="landlord.html">Landlord Advice</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Property Valuations</span>
+    </div>
+    <div class="hero-eyebrow">Landlord Service · 08</div>
+    <h1 class="hero-headline">Property <em>Valuations.</em></h1>
+    <p class="hero-sub">
+      Clear advice on what your property is worth, why,<br>
+      <em>and what that means for the decisions you're facing.</em>
+    </p>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="case-studies">
+  <div class="case-studies-inner">
+    <div class="case-studies-header">
+      <div>
+        <div class="case-studies-label">Recent instructions</div>
+        <h2 class="case-studies-title">Real questions, <em>real answers.</em></h2>
+      </div>
+      <p class="case-studies-intro">Four recent valuation instructions, each answering a different strategic question for the client.</p>
+    </div>
+    <div class="case-studies-grid">
+
+      <a href="case-bassetlaw-portfolio.html" class="case-study">
+        <div class="case-study-image">
+          <div>
+            <div class="tile-eyebrow">M&amp;A Context</div>
+            <div class="tile-number"><em>Business sale</em></div>
+            <div class="tile-result-label">4 properties valued, lease structures refined</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Office and industrial holdings across mixed ownership structures, repositioned ahead of business sale negotiations</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Portfolio Valuation · Mixed Holdings</div>
+        <h3 class="case-study-title">Bassetlaw Portfolio</h3>
+        <p class="case-study-summary">Four-property valuation supporting a wider business sale. Lease structures between operating company and property entities refined to enhance presented value.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-humber-portfolio.html" class="case-study">
+        <div class="case-study-image cream-tile">
+          <div>
+            <div class="tile-eyebrow">Strategic Roadmap</div>
+            <div class="tile-number"><em>Asset roadmap</em></div>
+            <div class="tile-result-label">5 retail properties, enhancement plan</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Portfolio-wide market rent and value advice, plus asset management opportunities to support long-term strategy</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Portfolio Valuation · Retail Investment</div>
+        <h3 class="case-study-title">Humber Region Portfolio</h3>
+        <p class="case-study-summary">Five-asset retail portfolio reviewed individually and as a whole. Value enhancement opportunities identified across renewals, regears and alternative-use potential.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-john-street-new-basford.html" class="case-study">
+        <div class="case-study-image cream-tile">
+          <div>
+            <div class="tile-eyebrow">Options Analysis</div>
+            <div class="tile-number"><em>Multi-scenario</em></div>
+            <div class="tile-result-label">sale, retention, or sale &amp; leaseback</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Substantial industrial premises valued under three strategic options to inform wider business planning</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Owner-Occupier Valuation · Industrial</div>
+        <h3 class="case-study-title">John Street, New Basford</h3>
+        <p class="case-study-summary">Owner-occupier weighing the future of their industrial premises. Three valuation scenarios prepared to inform a confident decision.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-38-40-high-pavement.html" class="case-study">
+        <div class="case-study-image">
+          <div>
+            <div class="tile-eyebrow">Upside Identified</div>
+            <div class="tile-number"><em>Special purchaser</em></div>
+            <div class="tile-result-label">value tested across multiple scenarios</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Period mixed-use city centre asset. Reversionary potential and special purchaser uplift considered against current value.</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Mixed-Use Valuation · City Centre</div>
+        <h3 class="case-study-title">38–40 High Pavement, Nottingham</h3>
+        <p class="case-study-summary">Substantial period office building with ground floor retail. Multiple valuation scenarios prepared to inform disposal and longer-term planning.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTRO / WHAT THIS WORK INVOLVES -->
+<section class="intro">
+  <div class="intro-inner">
+    <div class="intro-label">
+      What this work involves
+      <div class="intro-label-sub">A view on value tied to a real decision.</div>
+    </div>
+    <div class="intro-prose">
+      <p class="lead">What's this asset <em>actually worth?</em></p>
+      <p>
+        What would it fetch on the open market today? What's it worth in two years if I do X? What would a special purchaser pay for it? How does the lease structure affect value? Where's the upside?
+      </p>
+      <p class="emphasis">
+        This is the work landlords need most often.
+      </p>
+      <p>
+        A commercial view, properly evidenced and <strong>written for you rather than for a lender's file</strong>, supports real decisions in a way that a formal valuation report doesn't.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who">
+  <div class="who-inner">
+    <div class="who-label">
+      Who this is for
+      <div class="who-label-sub">Landlords facing decisions where value matters.</div>
+    </div>
+    <div class="who-prose">
+      <p>
+        Landlords facing a decision where value is the critical unknown. An asset you're considering selling. A portfolio you're refinancing. An acquisition where the price needs testing. A dispute where an independent view of value matters.
+      </p>
+      <p>
+        If you need to <strong>understand what your property is worth before you commit to a course of action</strong>, get in touch.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH — 6 PRINCIPLES -->
+<section class="approach">
+  <div class="approach-inner">
+    <div class="approach-header">
+      <h2 class="approach-title">How I <em>approach it.</em></h2>
+      <p class="approach-intro">Six principles that shape every valuation instruction, whether a single asset or a portfolio-wide review.</p>
+    </div>
+    <div class="approach-grid">
+
+      <div class="approach-item">
+        <div class="approach-num">01</div>
+        <div class="approach-name">Start with what you <em>actually need.</em></div>
+        <div class="approach-desc">Valuation advice tied to a specific decision is where the real value sits. The first conversation is usually about the decision, not the number.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">02</div>
+        <div class="approach-name">Multiple <em>scenarios.</em></div>
+        <div class="approach-desc">Value today. Value assuming re-letting. Value with asset management improvements. Value to a special purchaser. Different numbers for different questions.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">03</div>
+        <div class="approach-name">Backed by <em>evidence.</em></div>
+        <div class="approach-desc">Comparable transactions, market data, sector tone, lease analysis. Every number traces back to evidence, not assumption.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">04</div>
+        <div class="approach-name">Work through the <em>variables.</em></div>
+        <div class="approach-desc">Lease terms, covenant strength, repair position, market tone, alternative-use potential, special purchaser considerations. What's actually driving value.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">05</div>
+        <div class="approach-name">Explain it <em>plainly.</em></div>
+        <div class="approach-desc">You should finish the conversation understanding not just the number, but why it's the number. The reasoning matters as much as the figure.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">06</div>
+        <div class="approach-name">The right specialist <em>when needed.</em></div>
+        <div class="approach-desc">Some situations call for a formal Red Book valuation prepared by a RICS Registered Valuer. When that's what you need, I'll introduce you to one I'd trust with my own affairs.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WRITTEN FOR YOU, NOT A LENDER'S FILE -->
+<section class="honest">
+  <div class="honest-inner">
+    <div class="honest-label">An honest position</div>
+    <h2 class="honest-title">Written for you. <em>Not a lender's file.</em></h2>
+    <p class="honest-text">
+      A formal Red Book valuation has its place: lender requirements, HMRC submissions, probate, court proceedings. It's a compliance product, written to a regulated standard for a third party.
+    </p>
+    <p class="honest-text" style="margin-top: 28px;">
+      Strategic valuation advice is different. It's written for you, focused on the decision you're facing, and built to be useful, not just defensible. That's the work landlords need most often.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Start the conversation</div>
+    <h2 class="cta-title">Tell me about <em>the decision.</em></h2>
+    <p class="cta-sub">
+      If you've got a decision coming up and you need a considered view on value before you commit, that's exactly what this work is for. Get in touch.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="disputes.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates.html">Business Rates Appeals &amp; Mitigation</a></li>
+          <li><a href="valuations.html">Property Valuations</a></li>
+          <li><a href="#">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates Appeals &amp; Mitigation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Properties</a></li>
+          <li><a href="#">Compliance</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lease Renewals & Rent Reviews (Tenants) — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== Page-specific overrides ===== */
+  @media (min-width: 1025px) {
+    .case-studies-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 56px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Outcomes section — list-style answer to a prose-heavy section */
+  .outcomes {
+    padding: 110px 48px;
+    background: var(--cream);
+  }
+  .outcomes-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .outcomes-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .outcomes-label::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .outcomes-title {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    color: var(--navy);
+    letter-spacing: -1px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .outcomes-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .outcomes-intro {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.55;
+    color: var(--navy-soft);
+    margin-bottom: 56px;
+    letter-spacing: -0.2px;
+  }
+  .outcomes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 48px;
+  }
+  .outcomes-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 0;
+    border-top: 1px solid var(--grey-300);
+  }
+  .outcomes-num {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--terracotta);
+    letter-spacing: 2px;
+    padding-top: 4px;
+    flex-shrink: 0;
+  }
+  .outcomes-list h3 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+    margin-bottom: 10px;
+  }
+  .outcomes-list p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--grey-700);
+  }
+  @media (max-width: 768px) {
+    .outcomes-list {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="tenant.html" class="active">Services</a>
+    <a href="index.html#properties">Properties</a>
+    <a href="index.html#insights">Insights</a>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="tenant.html">Tenant Advice</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Lease Renewals & Rent Reviews</span>
+    </div>
+    <div class="hero-eyebrow">Tenant Service · 01</div>
+    <h1 class="hero-headline">Your landlord has a surveyor.<br><em>You should have one too.</em></h1>
+    <p class="hero-sub">
+      Lease renewals and rent reviews can affect costs, flexibility, and future plans for years. Handled properly, they <em>materially improve a tenant's position.</em>
+    </p>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="case-studies">
+  <div class="case-studies-inner">
+    <div class="case-studies-header">
+      <div>
+        <div class="case-studies-label">Recent instructions</div>
+        <h2 class="case-studies-title">Real savings, <em>real outcomes.</em></h2>
+      </div>
+      <p class="case-studies-intro">Four recent tenant instructions where structured negotiation moved the headline figure and protected the business behind it.</p>
+    </div>
+    <div class="case-studies-grid">
+
+      <a href="case-oversolve.html" class="case-study">
+        <div class="case-study-image">
+          <div>
+            <div class="tile-eyebrow">Combined Saving</div>
+            <div class="tile-number"><em>£135k+</em></div>
+            <div class="tile-result-label">across two instructions</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Rent review and subsequent lease renewal across three industrial units</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Rent Review & Renewal · Industrial</div>
+        <h3 class="case-study-title">Oversolve, Nottingham</h3>
+        <p class="case-study-summary">Section 26 strategy and the credible threat of third-party determination secured savings across both events.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-santini-restaurant.html" class="case-study">
+        <div class="case-study-image cream-tile">
+          <div>
+            <div class="tile-eyebrow">Term Saving</div>
+            <div class="tile-number"><em>£31,500</em></div>
+            <div class="tile-result-label">over remaining lease</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">£43,000 rent review proposal reduced to £37,000 with stepped uplift structure</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Rent Review · Restaurant</div>
+        <h3 class="case-study-title">Santini Restaurant, Ravenshead</h3>
+        <p class="case-study-summary">Defended a hospitality tenant against a proposal that threatened business viability.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-rainbow-jersey.html" class="case-study">
+        <div class="case-study-image cream-tile">
+          <div>
+            <div class="tile-eyebrow">Term Saving</div>
+            <div class="tile-number"><em>£25,000</em></div>
+            <div class="tile-result-label">vs landlord proposal</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">40% increase restructured into stepped five-year deal the business could absorb</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Lease Renewal · Industrial</div>
+        <h3 class="case-study-title">Rainbow Jersey, Nottingham</h3>
+        <p class="case-study-summary">Section 25 proposal absorbed through carefully structured stepped uplift.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-diversity-fitness.html" class="case-study">
+        <div class="case-study-image">
+          <div>
+            <div class="tile-eyebrow">Five-Year Saving</div>
+            <div class="tile-number"><em>£30,000</em></div>
+            <div class="tile-result-label">+ personal guarantee removed</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Rent reduction, guarantee removal, and shift to monthly payments. Ongoing advisory retained.</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Lease Renewal · Leisure</div>
+        <h3 class="case-study-title">Diversity Fitness, Claylands Avenue</h3>
+        <p class="case-study-summary">Multiple wins in a single negotiation, protecting both the business and the owner personally.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTRO / WHAT MOST TENANTS DON'T KNOW -->
+<section class="intro">
+  <div class="intro-inner">
+    <div class="intro-label">
+      What most tenants don't know
+      <div class="intro-label-sub">The rules of the game.</div>
+    </div>
+    <div class="intro-prose">
+      <p class="lead">Most tenants are <em>unrepresented</em> at rent review or lease renewal, and most don't realise there are rules the landlord has to follow.</p>
+      <p>
+        They assume surveyors only act for landlords. Or that professional representation isn't something a smaller business can justify. Or that there's nothing to negotiate because <strong>the landlord sets the number.</strong>
+      </p>
+      <p>
+        None of that is right.
+      </p>
+      <p class="emphasis">
+        Rent reviews and lease renewals are governed by RICS rules that exist specifically to protect both sides.
+      </p>
+      <p>
+        A landlord can't simply pick a rent. They have to justify it with proper market evidence, conduct the negotiation fairly, and abide by clear rules on what they have to show you and what evidence they're entitled to rely on.
+      </p>
+      <p>
+        Without representation, most tenants don't know any of this, so they fall back on the only argument they think they have: that their business can't afford an increase. <strong>Emotional appeals rarely move the needle</strong>, because they don't engage the rules the negotiation is actually being conducted under. What does move the needle is someone on your side who understands those rules as well as the landlord's surveyor does.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who">
+  <div class="who-inner">
+    <div class="who-label">
+      Who this is for
+      <div class="who-label-sub">Tenants facing a lease event.</div>
+    </div>
+    <div class="who-prose">
+      <p>
+        Tenants approaching a rent review or lease renewal, whether a proposal has already landed or an event is on the horizon.
+      </p>
+      <p>
+        Businesses who've always handled these moments alone and aren't sure what proper representation would change. Anyone who wants to <strong>understand where they actually stand</strong> before they respond to their landlord.
+      </p>
+      <p>
+        If that sounds like you, get in touch.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH — 6 PRINCIPLES -->
+<section class="approach">
+  <div class="approach-inner">
+    <div class="approach-header">
+      <h2 class="approach-title">How I <em>approach it.</em></h2>
+      <p class="approach-intro">Six principles that shape every tenant lease renewal and rent review I take on, for any premises, in any market, of any complexity.</p>
+    </div>
+    <div class="approach-grid">
+
+      <div class="approach-item">
+        <div class="approach-num">01</div>
+        <div class="approach-name">Read every <em>document first.</em></div>
+        <div class="approach-desc">Lease, variations, side letters, correspondence. I know what you've signed up to before I speak to your landlord.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">02</div>
+        <div class="approach-name">Assess the proposal <em>honestly.</em></div>
+        <div class="approach-desc">Whether the number is reasonable, high, or unsupportable, and whether the evidence stacks up. Sometimes there's a fight worth having. Sometimes there isn't. I'll tell you which.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">03</div>
+        <div class="approach-name">Build the <em>case.</em></div>
+        <div class="approach-desc">Market evidence, comparable transactions, condition of the premises, lease terms, sector context. The argument is only as strong as the evidence underneath it.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">04</div>
+        <div class="approach-name">Lead the negotiation <em>directly.</em></div>
+        <div class="approach-desc">Direct conversations with your landlord's agent. You kept informed at every step, at the level of detail that suits you.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">05</div>
+        <div class="approach-name">See it <em>through.</em></div>
+        <div class="approach-desc">Heads of terms, solicitor liaison, signed paperwork. The job isn't done until the paperwork is signed.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">06</div>
+        <div class="approach-name">Act <em>early.</em></div>
+        <div class="approach-desc">Lease events reward preparation. Coming to me well before the next event lets us position your situation properly, not react to someone else's framing of it.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT GOOD OUTCOMES LOOK LIKE -->
+<section class="outcomes">
+  <div class="outcomes-inner">
+    <div class="outcomes-label">What good outcomes look like</div>
+    <h2 class="outcomes-title">Lower rent. Smarter terms.<br><em>Real certainty.</em></h2>
+    <p class="outcomes-intro">Every instruction is different. But most tenant work comes down to some combination of:</p>
+    <ul class="outcomes-list">
+      <li>
+        <span class="outcomes-num">01</span>
+        <div>
+          <h3>A rent lower than first proposed.</h3>
+          <p>Whether through evidence-based negotiation, stepped uplifts, or rent-free periods structured to absorb the impact.</p>
+        </div>
+      </li>
+      <li>
+        <span class="outcomes-num">02</span>
+        <div>
+          <h3>A lease structured around your flexibility.</h3>
+          <p>Break clauses, repair obligations, and renewal rights that work for the business, not just the landlord.</p>
+        </div>
+      </li>
+      <li>
+        <span class="outcomes-num">03</span>
+        <div>
+          <h3>Terms that protect you.</h3>
+          <p>Personal guarantees removed where appropriate. Payment terms set to match cash flow. Service charge caps where they make sense.</p>
+        </div>
+      </li>
+      <li>
+        <span class="outcomes-num">04</span>
+        <div>
+          <h3>Certainty over your cost base.</h3>
+          <p>So you can plan, invest, and grow the business with confidence rather than anxiety about the next rent demand.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Start the conversation</div>
+    <h2 class="cta-title">Talk to me about <em>your lease event.</em></h2>
+    <p class="cta-sub">
+      Send me the lease, tell me what's on the horizon, and we'll work out whether I can help. Call, email, or WhatsApp, whichever works.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="#">Strategic Asset Management</a></li>
+          <li><a href="#">Acquisitions</a></li>
+          <li><a href="#">Sales & Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals & Rent Reviews</a></li>
+          <li><a href="#">Valuations</a></li>
+          <li><a href="#">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals & Rent Reviews</a></li>
+          <li><a href="#">Lease Acquisitions & Exits</a></li>
+          <li><a href="#">Strategic Reviews</a></li>
+          <li><a href="#">Disputes</a></li>
+          <li><a href="#">Business Rates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Properties</a></li>
+          <li><a href="#">Compliance</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh & Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

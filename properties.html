@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Properties For Sale & To Let — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== Page-specific overrides ===== */
+
+  /* PROPERTY FEATURE — editorial treatment for each listed property */
+  .property {
+    padding: 100px 48px 120px;
+    background: var(--paper);
+  }
+  .property-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .property-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px;
+  }
+  .property-meta::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+
+  .property-title {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 1.1;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .property-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .property-address {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.6vw, 22px);
+    color: var(--navy-soft);
+    margin-bottom: 56px;
+    letter-spacing: -0.2px;
+  }
+
+  /* Two-column layout for image + headline details */
+  .property-hero {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 56px;
+    align-items: start;
+    margin-bottom: 80px;
+  }
+
+  .property-image {
+    aspect-ratio: 4/3;
+    background: var(--grey-100);
+    overflow: hidden;
+    position: relative;
+  }
+  .property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .property-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 32px;
+  }
+  .property-image-placeholder span {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--cream);
+    opacity: 0.6;
+    letter-spacing: -0.2px;
+  }
+
+  .property-headline-details {
+    padding-top: 12px;
+  }
+
+  .property-availability {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    border: 1px solid var(--terracotta);
+    padding: 8px 16px;
+    margin-bottom: 32px;
+  }
+
+  .property-summary {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2vw, 26px);
+    line-height: 1.4;
+    color: var(--navy);
+    letter-spacing: -0.3px;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+  .property-summary em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .property-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--grey-300);
+  }
+  .property-stat-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 6px;
+  }
+  .property-stat-value {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+
+  /* Detail sections below the hero */
+  .property-details {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 96px;
+    margin-bottom: 64px;
+    align-items: start;
+  }
+  .property-details-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 6px;
+    position: relative;
+  }
+  .property-details-label::before {
+    content: '';
+    position: absolute;
+    top: -16px; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .property-details-content p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--grey-700);
+    margin-bottom: 20px;
+  }
+  .property-details-content strong {
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .property-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 48px;
+  }
+  .property-highlights li {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(16px, 1.4vw, 19px);
+    line-height: 1.4;
+    color: var(--navy);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    letter-spacing: -0.2px;
+  }
+  .property-highlights li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    flex-shrink: 0;
+    transform: translateY(-3px);
+  }
+
+  /* Property enquiry button */
+  .property-enquire {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 36px;
+    background: var(--navy);
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    margin-top: 16px;
+  }
+  .property-enquire:hover {
+    background: var(--terracotta);
+  }
+  .property-enquire-arrow {
+    transition: transform 0.3s ease;
+  }
+  .property-enquire:hover .property-enquire-arrow {
+    transform: translateX(4px);
+  }
+
+  /* Empty state / register interest */
+  .register {
+    padding: 120px 48px;
+    background: var(--cream);
+    border-top: 1px solid var(--grey-300);
+  }
+  .register-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .register-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .register-label::before,
+  .register-label::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .register-title {
+    font-family: var(--serif);
+    font-size: clamp(32px, 3.6vw, 48px);
+    line-height: 1.15;
+    color: var(--navy);
+    letter-spacing: -0.8px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  .register-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .register-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.6;
+    color: var(--navy-soft);
+    max-width: 720px;
+    margin: 0 auto;
+    letter-spacing: -0.2px;
+  }
+
+  @media (max-width: 1024px) {
+    .property-hero { grid-template-columns: 1fr; gap: 40px; }
+    .property-details { grid-template-columns: 1fr; gap: 24px; }
+    .property-details-label::before { display: none; }
+  }
+  @media (max-width: 640px) {
+    .property-stats { grid-template-columns: 1fr; }
+    .property-highlights { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="landlord.html">Services</a>
+    <a href="properties.html" class="active">Properties</a>
+    <a href="index.html#insights">Insights</a>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Properties</span>
+    </div>
+    <div class="hero-eyebrow">Available now</div>
+    <h1 class="hero-headline">Selected Current <em>Opportunities.</em></h1>
+    <p class="hero-sub">
+      A small handful of active instructions across the practice.<br>
+      <em>Supported by clear advice and direct involvement throughout.</em>
+    </p>
+  </div>
+</section>
+
+<!-- INTRODUCTORY BLOCK: Stadium Business Court (shared context) -->
+<section class="property">
+  <div class="property-inner">
+
+    <div class="property-meta">Office · To Let · Joint Agency · Pride Park</div>
+    <h2 class="property-title">Stadium <em>Business Court.</em></h2>
+    <p class="property-address">Pride Park · Derby · DE24 8HP</p>
+
+    <div class="property-details" style="margin-bottom: 24px;">
+      <div class="property-details-label">The opportunity</div>
+      <div class="property-details-content">
+        <p>
+          Recently refurbished, two-storey self-contained office accommodation at Stadium Business Court on Derby's premier business park. <strong>Available as two separate lettings</strong> (Units 4 &amp; 5, or Unit 6), or as the whole building combined.
+        </p>
+        <p>
+          Each unit provides reception, open plan office accommodation, meeting rooms, kitchen and W/C facilities, with air conditioning, suspended ceilings, LED lighting, and on-site parking.
+        </p>
+        <p style="margin-top: 32px; font-size: 14px; color: var(--navy-soft); font-style: italic;">
+          Marketed jointly with Fisher Hargreaves Proctor (FHP) of Derby.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROPERTY 1: Units 4 &amp; 5 -->
+<section class="property" style="padding-top: 40px;">
+  <div class="property-inner">
+
+    <div class="property-meta">Option One · Units 4 &amp; 5</div>
+    <h2 class="property-title">Units 4 &amp; 5, <em>Stadium Business Court.</em></h2>
+    <p class="property-address">2,886 sq ft · Two-storey office</p>
+
+    <div class="property-hero">
+      <div class="property-image">
+        <img src="images/pride-park-units-4-5.jpg" alt="Units 4 &amp; 5, Stadium Business Court, Pride Park, Derby — two-storey office" onerror="this.parentElement.innerHTML='<div class=&quot;property-image-placeholder&quot;><span>Photograph to follow</span></div>'">
+      </div>
+
+      <div class="property-headline-details">
+        <div class="property-availability">Available Now</div>
+        <p class="property-summary">
+          Larger of the two splits. Open plan office space across ground and first floors with meeting and breakout rooms. <em>Suited to growing teams.</em>
+        </p>
+        <div class="property-stats">
+          <div>
+            <div class="property-stat-label">Size</div>
+            <div class="property-stat-value">2,886 sq ft<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">(268 m²)</span></div>
+          </div>
+          <div>
+            <div class="property-stat-label">Rent</div>
+            <div class="property-stat-value">£42,000<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">per annum</span></div>
+          </div>
+          <div>
+            <div class="property-stat-label">Tenure</div>
+            <div class="property-stat-value">New lease<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">terms available</span></div>
+          </div>
+          <div>
+            <div class="property-stat-label">EPC</div>
+            <div class="property-stat-value">B (50)<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">Energy rating</span></div>
+          </div>
+        </div>
+        <a href="mailto:rob@rhcharteredsurveyors.co.uk?subject=Enquiry: Units 4 &amp; 5, Stadium Business Court, Pride Park" class="property-enquire">
+          Enquire about Units 4 &amp; 5
+          <span class="property-enquire-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROPERTY 2: Unit 6 -->
+<section class="property" style="padding-top: 40px; padding-bottom: 60px;">
+  <div class="property-inner">
+
+    <div class="property-meta">Option Two · Unit 6</div>
+    <h2 class="property-title">Unit 6, <em>Stadium Business Court.</em></h2>
+    <p class="property-address">1,286 sq ft · Two-storey office</p>
+
+    <div class="property-hero">
+      <div class="property-image">
+        <img src="images/pride-park-unit-6.jpg" alt="Unit 6, Stadium Business Court, Pride Park, Derby — two-storey office" onerror="this.parentElement.innerHTML='<div class=&quot;property-image-placeholder&quot;><span>Photograph to follow</span></div>'">
+      </div>
+
+      <div class="property-headline-details">
+        <div class="property-availability">Available Now</div>
+        <p class="property-summary">
+          The smaller split. Compact two-storey office with all the same specifications. <em>Suited to small teams or single-floor occupiers.</em>
+        </p>
+        <div class="property-stats">
+          <div>
+            <div class="property-stat-label">Size</div>
+            <div class="property-stat-value">1,286 sq ft<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">(119 m²)</span></div>
+          </div>
+          <div>
+            <div class="property-stat-label">Rent</div>
+            <div class="property-stat-value">£20,500<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">per annum</span></div>
+          </div>
+          <div>
+            <div class="property-stat-label">Tenure</div>
+            <div class="property-stat-value">New lease<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">terms available</span></div>
+          </div>
+          <div>
+            <div class="property-stat-label">EPC</div>
+            <div class="property-stat-value">B (35)<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">Energy rating</span></div>
+          </div>
+        </div>
+        <a href="mailto:rob@rhcharteredsurveyors.co.uk?subject=Enquiry: Unit 6, Stadium Business Court, Pride Park" class="property-enquire">
+          Enquire about Unit 6
+          <span class="property-enquire-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMBINED OPTION + LOCATION -->
+<section class="property" style="padding-top: 20px; padding-bottom: 60px;">
+  <div class="property-inner">
+
+    <div class="property-details">
+      <div class="property-details-label">Or take the whole</div>
+      <div class="property-details-content">
+        <p>
+          The full building is also available as a single letting. <strong>4,172 sq ft total</strong> at <strong>£62,580 per annum</strong>, providing a self-contained office across both Units 4–5 and Unit 6.
+        </p>
+        <a href="mailto:rob@rhcharteredsurveyors.co.uk?subject=Enquiry: Whole Building, Stadium Business Court, Pride Park" class="property-enquire">
+          Enquire about the whole building
+          <span class="property-enquire-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="property-details" style="margin-top: 56px;">
+      <div class="property-details-label">Location</div>
+      <div class="property-details-content">
+        <p>
+          Pride Park is Derby's premier business address, with over 10,000 people working on the park each day. Immediately south of the <strong>A52 dual carriageway</strong>, with easy access to Derby city centre and Junction 25 of the M1.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- REGISTER INTEREST / EMPTY STATE -->
+<section class="register">
+  <div class="register-inner">
+    <div class="register-label">Looking for something specific?</div>
+    <h2 class="register-title">Tell me what <em>you're after.</em></h2>
+    <p class="register-text">
+      Whether you're acquiring, looking to lease, or want to be kept in mind for upcoming opportunities, get in touch. A meaningful part of my acquisition work happens before instructions reach the open market.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Start the conversation</div>
+    <h2 class="cta-title">Get in <em>touch.</em></h2>
+    <p class="cta-sub">
+      Call, email, or WhatsApp. Whichever works.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="disputes.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates.html">Business Rates Appeals &amp; Mitigation</a></li>
+          <li><a href="valuations.html">Property Valuations</a></li>
+          <li><a href="property-management.html">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates Appeals &amp; Mitigation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="#">Insights</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="#">Compliance</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

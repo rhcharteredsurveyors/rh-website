@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compliance & Regulation — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== COMPLIANCE PAGE ===== */
+
+  /* Section pattern - matches contact page "what happens" structure */
+  .legal-section {
+    padding: 80px 48px;
+    background: var(--paper);
+  }
+  .legal-section:nth-of-type(even) {
+    background: var(--cream);
+  }
+  .legal-section + .legal-section {
+    border-top: 1px solid var(--grey-300);
+  }
+  .legal-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .legal-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+  .legal-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .legal-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .legal-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .legal-content {
+    max-width: 720px;
+  }
+  .legal-content h3 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.4vw, 32px);
+    line-height: 1.2;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    margin-bottom: 24px;
+  }
+  .legal-content h3 em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .legal-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--grey-700);
+    margin-bottom: 20px;
+  }
+  .legal-content p:last-child {
+    margin-bottom: 0;
+  }
+  .legal-content strong {
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .legal-content a {
+    color: var(--terracotta);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .legal-content a:hover {
+    color: var(--navy);
+  }
+
+  /* Practice details — key/value list */
+  .practice-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 48px;
+    padding-top: 8px;
+  }
+  .practice-detail-item {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--grey-300);
+  }
+  .practice-detail-item:last-child {
+    border-bottom: 1px solid var(--grey-300);
+  }
+  .practice-detail-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 6px;
+  }
+  .practice-detail-value {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--navy);
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 1024px) {
+    .legal-row {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .legal-label::before {
+      display: none;
+    }
+    .practice-details {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="landlord.html">Services</a>
+    <a href="properties.html">Properties</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Compliance &amp; Regulation</span>
+    </div>
+    <div class="hero-eyebrow">Professional standards</div>
+    <h1 class="hero-headline">Compliance &amp; <em>Regulation.</em></h1>
+    <p class="hero-sub">
+      The professional framework within which the practice operates.<br>
+      <em>RICS-regulated, independently insured, properly governed.</em>
+    </p>
+  </div>
+</section>
+
+<!-- RICS REGULATION -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        01 · Regulation
+        <div class="legal-label-sub">RICS membership and standards.</div>
+      </div>
+      <div class="legal-content">
+        <h3>RICS <em>Regulation.</em></h3>
+        <p>
+          RH Chartered Surveyors is regulated by the <strong>Royal Institution of Chartered Surveyors (RICS)</strong>. Rob Haigh has been a Member since 2014, and the practice operates in full accordance with the RICS Rules of Conduct.
+        </p>
+        <p>
+          As a RICS-regulated firm, RH Chartered Surveyors is required to operate within a defined professional and ethical framework, acting with integrity and independence at all times. This matters because it sets a clear standard for how I work. Advice is objective, independent, and properly considered.
+        </p>
+        <p>
+          RICS membership provides clients with assurance that they are working with a properly qualified, accountable professional operating to recognised industry standards. All advice is provided objectively and in the best interests of the client.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLAINTS HANDLING -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        02 · Complaints
+        <div class="legal-label-sub">If something isn't right.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Complaints <em>Handling.</em></h3>
+        <p>
+          If you have a concern about any aspect of the service provided, please raise it with me directly in the first instance. <strong>All complaints are taken seriously and reviewed carefully.</strong>
+        </p>
+        <p>
+          If a complaint cannot be resolved internally, access to an independent redress mechanism is available as required by RICS. The full complaints handling procedure can be read <a href="#">here</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONAL INDEMNITY INSURANCE -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        03 · Insurance
+        <div class="legal-label-sub">Professional indemnity cover.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Professional Indemnity <em>Insurance.</em></h3>
+        <p>
+          RH Chartered Surveyors maintains professional indemnity insurance in accordance with RICS requirements. This provides protection for both the firm and its clients in the event that a claim arises in connection with professional advice or services provided.
+        </p>
+        <p>
+          <strong>Details of the firm's insurance arrangements are available on request.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANTI-MONEY LAUNDERING -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        04 · AML / KYC
+        <div class="legal-label-sub">Identity verification.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Anti-Money <em>Laundering.</em></h3>
+        <p>
+          RH Chartered Surveyors is required to comply with the <strong>Money Laundering Regulations 2017 (as amended)</strong>. Before commencing instructions, identity verification and beneficial ownership checks are conducted on clients in line with RICS guidance.
+        </p>
+        <p>
+          This is standard practice across the industry and exists to protect the integrity of UK property transactions. Information provided for AML purposes is handled in accordance with the practice's data protection obligations.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFLICTS OF INTEREST -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        05 · Conflicts
+        <div class="legal-label-sub">How independence is preserved.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Conflicts of <em>Interest.</em></h3>
+        <p>
+          Before accepting any instruction, conflicts of interest are checked against the practice's existing client list. Where a potential or actual conflict is identified, the matter is <strong>declined or, where appropriate, disclosed in writing to all relevant parties before proceeding</strong>.
+        </p>
+        <p>
+          This applies particularly to acquisition and disposal work, where the practice does not act for both sides of any transaction. Independent advice means independent throughout.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA PROTECTION -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        06 · Data
+        <div class="legal-label-sub">Privacy &amp; data protection.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Data <em>Protection.</em></h3>
+        <p>
+          The practice processes personal data in accordance with the <strong>UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018</strong>. Personal data is collected only where necessary for the conduct of professional services or compliance with regulatory obligations.
+        </p>
+        <p>
+          A full statement on what data is collected, how it is used, and the rights you hold over your data is set out in the <a href="privacy.html">Privacy Policy</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REDRESS SCHEME -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        07 · Redress
+        <div class="legal-label-sub">Independent redress.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Redress <em>Scheme.</em></h3>
+        <p>
+          Details of RH Chartered Surveyors' registered redress scheme will be published here shortly. In the interim, please refer to the complaints handling procedure above for details of internal complaints handling and the independent redress mechanism required by RICS.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE DETAILS -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        08 · Practice
+        <div class="legal-label-sub">Legal &amp; registration details.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Practice <em>Details.</em></h3>
+        <p>
+          RH Chartered Surveyors is a trading entity of <strong>Haigh &amp; Haigh Properties Limited</strong>, registered in England.
+        </p>
+        <div class="practice-details">
+          <div class="practice-detail-item">
+            <div class="practice-detail-label">Trading name</div>
+            <div class="practice-detail-value">RH Chartered Surveyors</div>
+          </div>
+          <div class="practice-detail-item">
+            <div class="practice-detail-label">Registered company</div>
+            <div class="practice-detail-value">Haigh &amp; Haigh Properties Ltd</div>
+          </div>
+          <div class="practice-detail-item">
+            <div class="practice-detail-label">Company number</div>
+            <div class="practice-detail-value">12302429</div>
+          </div>
+          <div class="practice-detail-item">
+            <div class="practice-detail-label">RICS membership</div>
+            <div class="practice-detail-value">5020924</div>
+          </div>
+          <div class="practice-detail-item">
+            <div class="practice-detail-label">Founder &amp; Director</div>
+            <div class="practice-detail-value">Rob Haigh MRICS</div>
+          </div>
+          <div class="practice-detail-item">
+            <div class="practice-detail-label">Office address</div>
+            <div class="practice-detail-value">12A Southwell Business Centre, Crew Lane, Southwell, Nottinghamshire NG25 0TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Any questions?</div>
+    <h2 class="cta-title">Ask me <em>directly.</em></h2>
+    <p class="cta-sub">
+      If you'd like to see insurance documents, complaints procedures, or any other compliance information referenced on this page, get in touch.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="disputes.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates.html">Business Rates Appeals &amp; Mitigation</a></li>
+          <li><a href="valuations.html">Property Valuations</a></li>
+          <li><a href="property-management.html">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates Appeals &amp; Mitigation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

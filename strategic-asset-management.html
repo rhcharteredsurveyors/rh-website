@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategic Asset Management — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== Page-specific overrides ===== */
+
+  /* "The longer we work together, the more useful I become" — cream pause section */
+  .honest {
+    padding: 110px 48px;
+    background: var(--cream);
+  }
+  .honest-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .honest-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .honest-label::before,
+  .honest-label::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .honest-title {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.4vw, 44px);
+    line-height: 1.2;
+    color: var(--navy);
+    letter-spacing: -0.6px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  .honest-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .honest-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.6;
+    color: var(--navy-soft);
+    max-width: 760px;
+    margin: 0 auto;
+    letter-spacing: -0.2px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="landlord.html" class="active">Services</a>
+    <a href="index.html#properties">Properties</a>
+    <a href="index.html#insights">Insights</a>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="landlord.html">Landlord Advice</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Strategic Asset Management</span>
+    </div>
+    <div class="hero-eyebrow">Landlord Service · 07</div>
+    <h1 class="hero-headline">Strategic <em>Asset Management.</em></h1>
+    <p class="hero-sub">
+      One advisor across your commercial property portfolio.<br>
+      Every asset, every lease, every decision.<br>
+      <em>One relationship, over years. Not instructions.</em>
+    </p>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="case-studies">
+  <div class="case-studies-inner">
+    <div class="case-studies-header">
+      <div>
+        <div class="case-studies-label">Recent instructions</div>
+        <h2 class="case-studies-title">Real portfolios, <em>real partnership.</em></h2>
+      </div>
+      <p class="case-studies-intro">Three recent strategic asset management instructions, ranging from multi-sector portfolio advisory to multi-discipline asset repositioning.</p>
+    </div>
+    <div class="case-studies-grid">
+
+      <a href="case-nottingham-portfolio.html" class="case-study">
+        <div class="case-study-image">
+          <div>
+            <div class="tile-eyebrow">Portfolio Lead</div>
+            <div class="tile-number"><em>5 assets</em></div>
+            <div class="tile-result-label">across five sectors, one advisor</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Retail, hospitality, mixed-use, development, student. Lease restructuring and disposal strategy across the portfolio.</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Multi-Asset Portfolio · Private Investor</div>
+        <h3 class="case-study-title">Nottingham Portfolio</h3>
+        <p class="case-study-summary">Lead advisor across five Nottingham assets spanning five sectors. Disposal strategy supported by pre-marketing asset management.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-pride-park-asset-management.html" class="case-study">
+        <div class="case-study-image cream-tile">
+          <div>
+            <div class="tile-eyebrow">Multi-Discipline</div>
+            <div class="tile-number"><em>End-to-end</em></div>
+            <div class="tile-result-label">lease risk, dilapidations, refurb, re-let</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Tenant break exercised exactly as flagged. Repositioning coordinated across legal, dilapidations, refurbishment and letting.</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Asset Repositioning · Office</div>
+        <h3 class="case-study-title">Stadium Business Court, Pride Park</h3>
+        <p class="case-study-summary">From strategic review to re-letting, four disciplines coordinated by a single advisor across one client relationship.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-103-ilkeston-road-sam.html" class="case-study">
+        <div class="case-study-image">
+          <div>
+            <div class="tile-eyebrow">Strategic Staging</div>
+            <div class="tile-number"><em>Interim → Redev</em></div>
+            <div class="tile-result-label">income up, flexibility preserved</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Rent increased from £8,000 to £12,000 pa. Rolling mutual break clause preserved redevelopment optionality.</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Interim Strategy · Mixed-Use</div>
+        <h3 class="case-study-title">103 Ilkeston Road, Nottingham</h3>
+        <p class="case-study-summary">Restructured the lease to deliver immediate rental uplift while preserving redevelopment flexibility for student accommodation plans.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTRO / WHAT THIS WORK INVOLVES -->
+<section class="intro">
+  <div class="intro-inner">
+    <div class="intro-label">
+      What this work involves
+      <div class="intro-label-sub">The whole portfolio, one advisor.</div>
+    </div>
+    <div class="intro-prose">
+      <p class="lead">Most landlords with a portfolio don't need a surveyor for <em>one job.</em></p>
+      <p>
+        They need someone who knows the whole picture. Every asset, every lease, every tenant, every upcoming decision. And who's thinking about it between phone calls, not just on them.
+      </p>
+      <p class="emphasis">
+        That's what Strategic Asset Management is.
+      </p>
+      <p>
+        I act as your lead advisor across everything: lease events, acquisitions, disposals, management, valuations, rates, disputes. The lot. <strong>No referrals to another department. No meeting a new face for each matter.</strong>
+      </p>
+      <p>
+        One relationship, across every asset you own, for as long as you need me.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who">
+  <div class="who-inner">
+    <div class="who-label">
+      Who this is for
+      <div class="who-label-sub">Sophisticated property holders.</div>
+    </div>
+    <div class="who-prose">
+      <p>
+        Property companies. High-net-worth individuals with several assets. Businesses whose property is a material part of their wealth.
+      </p>
+      <p>
+        If your portfolio is too valuable, too active, or too complex to manage instruction-by-instruction, <strong>this is the relationship that works.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH — 6 PRINCIPLES -->
+<section class="approach">
+  <div class="approach-inner">
+    <div class="approach-header">
+      <h2 class="approach-title">How I <em>approach it.</em></h2>
+      <p class="approach-intro">Six principles that define the difference between transactional surveying and a strategic asset management relationship.</p>
+    </div>
+    <div class="approach-grid">
+
+      <div class="approach-item">
+        <div class="approach-num">01</div>
+        <div class="approach-name">Know your assets <em>as well as you do.</em></div>
+        <div class="approach-desc">I'll work through each property, lease and tenant until I have the same mental picture you have. The relationship starts here.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">02</div>
+        <div class="approach-name">Stay ahead of <em>the lease calendar.</em></div>
+        <div class="approach-desc">I track upcoming events and flag the ones that need decisions taken in good time. Lease events handled early are always better than lease events handled late.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">03</div>
+        <div class="approach-name">Notice what you're <em>not seeing.</em></div>
+        <div class="approach-desc">Underperforming assets, rates exposure, tenants heading for trouble, acquisitions that fit your thesis, disposals worth thinking about. Part of the job is staying alert on your behalf.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">04</div>
+        <div class="approach-name">Be the <em>first call.</em></div>
+        <div class="approach-desc">When something happens, you ring me. I tell you what I think, plainly. We decide what to do. No filter, no team meeting required.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">05</div>
+        <div class="approach-name">Handle the <em>execution.</em></div>
+        <div class="approach-desc">When an instruction lands, you don't start from scratch with someone else. I know the asset, the portfolio, and how you like to work.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">06</div>
+        <div class="approach-name">Built for the <em>long term.</em></div>
+        <div class="approach-desc">This isn't a one-off instruction. The value of the relationship builds over time, and the longer we work together, the more useful I become.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE LONGER WE WORK TOGETHER -->
+<section class="honest">
+  <div class="honest-inner">
+    <div class="honest-label">An honest position</div>
+    <h2 class="honest-title">The longer we work together,<br><em>the more useful I become.</em></h2>
+    <p class="honest-text">
+      Strategic asset management isn't a one-off instruction. It's a relationship that compounds. The first quarter is about getting to know your portfolio.
+    </p>
+    <p class="honest-text" style="margin-top: 28px;">
+      Over time, I come to know it as well as you do. Sometimes better. The advice gets faster, sharper, and more useful for it.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Start the conversation</div>
+    <h2 class="cta-title">Tell me about <em>your portfolio.</em></h2>
+    <p class="cta-sub">
+      If you're considering whether this kind of relationship would suit you, the easiest thing is a conversation. No brief, no proposal, no pressure. Just a chat about your portfolio and what you're doing with it. If it's a fit, we'll take it from there.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="disputes.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates.html">Business Rates Appeals &amp; Mitigation</a></li>
+          <li><a href="#">Valuations</a></li>
+          <li><a href="#">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates Appeals &amp; Mitigation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Properties</a></li>
+          <li><a href="#">Compliance</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

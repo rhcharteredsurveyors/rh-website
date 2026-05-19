@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engagement Terms — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== ENGAGEMENT PAGE - matches Compliance / Privacy family pattern ===== */
+  .legal-section {
+    padding: 80px 48px;
+    background: var(--paper);
+  }
+  .legal-section:nth-of-type(even) {
+    background: var(--cream);
+  }
+  .legal-section + .legal-section {
+    border-top: 1px solid var(--grey-300);
+  }
+  .legal-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .legal-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+  .legal-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .legal-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .legal-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .legal-content {
+    max-width: 720px;
+  }
+  .legal-content h3 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.4vw, 32px);
+    line-height: 1.2;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    margin-bottom: 24px;
+  }
+  .legal-content h3 em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .legal-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--grey-700);
+    margin-bottom: 20px;
+  }
+  .legal-content p:last-child {
+    margin-bottom: 0;
+  }
+  .legal-content strong {
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .legal-content a {
+    color: var(--terracotta);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .legal-content a:hover {
+    color: var(--navy);
+  }
+  .legal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  .legal-content ul li {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--grey-700);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--grey-300);
+    display: grid;
+    grid-template-columns: 24px 200px 1fr;
+    align-items: start;
+    gap: 16px;
+  }
+  .legal-content ul li:last-child {
+    border-bottom: none;
+  }
+  .legal-content ul li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    flex-shrink: 0;
+    align-self: start;
+    margin-top: 10px;
+  }
+  .legal-content ul li strong {
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .legal-content ul li.simple {
+    grid-template-columns: 24px 1fr;
+  }
+  @media (max-width: 768px) {
+    .legal-content ul li {
+      grid-template-columns: 18px 1fr;
+      gap: 12px;
+    }
+    .legal-content ul li strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .legal-row {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .legal-label::before {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="landlord.html">Services</a>
+    <a href="properties.html">Properties</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Engagement Terms</span>
+    </div>
+    <div class="hero-eyebrow">How instructions work</div>
+    <h1 class="hero-headline">Engagement <em>Terms.</em></h1>
+    <p class="hero-sub">
+      How instructions begin, how fees work, and what to expect.<br>
+      <em>Plain English. Full Terms of Business issued before any work starts.</em>
+    </p>
+  </div>
+</section>
+
+<!-- HOW INSTRUCTIONS START -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        01 · Starting out
+        <div class="legal-label-sub">First conversation to instruction.</div>
+      </div>
+      <div class="legal-content">
+        <h3>How instructions <em>begin.</em></h3>
+        <p>
+          The first step is always a conversation. You tell me about the matter, I tell you whether I think I can help, and we work out roughly what's involved.
+        </p>
+        <p>
+          If it's a fit, I'll follow up in writing with a <strong>Letter of Engagement</strong> setting out the scope of the work and the fee basis, alongside the practice's standard <strong>Terms of Business</strong>. Nothing commences until both have been issued and the engagement is accepted by you.
+        </p>
+        <p>
+          This is a requirement of RICS Rule 4 and good professional practice. It also protects both sides: <strong>clarity over what's being done, on what terms, for what fee, before any work begins.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW FEES WORK -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        02 · Fees
+        <div class="legal-label-sub">Fixed where possible.</div>
+      </div>
+      <div class="legal-content">
+        <h3>How fees <em>are structured.</em></h3>
+        <p>
+          Most instructions are quoted as a <strong>fixed fee</strong>. I'd rather price the work upfront than meter it by the hour, and most landlord and tenant matters lend themselves to it. The fee is set out in the Letter of Engagement before any work commences.
+        </p>
+        <p>
+          Where the scope is harder to define, work may be charged on an <strong>hourly basis</strong>, agreed in writing in advance. For property agency work, fees are typically calculated as a <strong>percentage of the transaction value</strong>.
+        </p>
+        <p>
+          All fees are exclusive of VAT and reasonable disbursements (such as Land Registry searches, mileage, or other third-party costs incurred on the instruction).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BILLING -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        03 · Billing
+        <div class="legal-label-sub">When fees are invoiced.</div>
+      </div>
+      <div class="legal-content">
+        <h3>When fees <em>are due.</em></h3>
+        <p>
+          Billing terms vary by instruction and are set out in the Letter of Engagement. Common arrangements include:
+        </p>
+        <ul>
+          <li><strong>On completion</strong><span>The default for most professional work. Single invoice issued on completion of the Services.</span></li>
+          <li><strong>Staged billing</strong><span>For longer-running matters. A proportion of the fee is invoiced at agreed milestones, with the balance due on completion.</span></li>
+          <li><strong>On transaction</strong><span>For agency work, the fee is typically due on completion of the sale or letting.</span></li>
+        </ul>
+        <p>
+          Invoices are payable within <strong>30 days</strong> of issue.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        04 · Scope
+        <div class="legal-label-sub">What's covered, what isn't.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Scope of <em>services.</em></h3>
+        <p>
+          Each Letter of Engagement defines the scope of work specifically. As a general principle, the advice provided is limited to matters on which a Chartered Surveyor is qualified to advise.
+        </p>
+        <p>
+          Some matters fall outside that scope and are not covered unless specifically agreed in writing. These include:
+        </p>
+        <ul>
+          <li><strong>Legal advice</strong><span>Interpretation or drafting of leases, contracts, or other legal documents. A solicitor should be instructed for these matters.</span></li>
+          <li><strong>Formal valuations</strong><span>Red Book valuations for lender, HMRC, court or probate purposes. A RICS Registered Valuer is instructed where required.</span></li>
+          <li><strong>Building surveys</strong><span>Structural surveys, condition reports, or dilapidations assessments unless specifically commissioned.</span></li>
+          <li><strong>Specialist matters</strong><span>Asbestos, contamination, capital allowances, or other matters requiring specialist consultants.</span></li>
+        </ul>
+        <p>
+          Where additional work is requested beyond the original scope, this will be agreed in writing with a corresponding fee variation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMINATION -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        05 · Termination
+        <div class="legal-label-sub">If circumstances change.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Ending an <em>instruction.</em></h3>
+        <p>
+          Either party may terminate an instruction by giving <strong>30 days' written notice</strong>. Fees and disbursements incurred up to the point of termination remain payable, calculated on a pro-rata basis where applicable.
+        </p>
+        <p>
+          Some specific termination provisions apply where work cannot be completed for reasons outside both parties' control, or where regulatory obligations require it. These are set out in full in the Terms of Business.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIDENTIALITY -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        06 · Confidentiality
+        <div class="legal-label-sub">Information shared in confidence.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Confidentiality <em>both ways.</em></h3>
+        <p>
+          Information shared in the course of an instruction is treated as confidential. The practice does not discuss client matters with third parties without authority, save where disclosure is required by professional duty, regulatory obligation, or law.
+        </p>
+        <p>
+          The full position on confidentiality, including in joint instructions and where information must be disclosed to professional bodies or authorities, is set out in the Terms of Business.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIABILITY -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        07 · Liability
+        <div class="legal-label-sub">Professional indemnity cover.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Liability <em>limits.</em></h3>
+        <p>
+          The practice maintains Professional Indemnity Insurance in accordance with RICS requirements. The standard aggregate limit of liability for any single instruction is <strong>£1,000,000</strong>, reflecting the PI cover in place.
+        </p>
+        <p>
+          A higher limit may be agreed in writing before an instruction commences, subject to availability of insurance and an additional fee. The standard liability limit, exclusions, and other related provisions are set out in detail in the Terms of Business.
+        </p>
+        <p>
+          Advice is provided <strong>solely for the benefit of the Client</strong> and may not be relied upon by third parties without prior written consent.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOVERNING LAW -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        08 · Governing law
+        <div class="legal-label-sub">Jurisdiction.</div>
+      </div>
+      <div class="legal-content">
+        <h3>Governing <em>law.</em></h3>
+        <p>
+          The engagement agreement, including the Letter of Engagement and Terms of Business, is governed by and construed in accordance with <strong>English law</strong>. Both parties submit to the exclusive jurisdiction of the English Courts in relation to any dispute arising out of or in connection with the agreement.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL TERMS -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div class="legal-label">
+        09 · Full terms
+        <div class="legal-label-sub">Issued on engagement.</div>
+      </div>
+      <div class="legal-content">
+        <h3>The full <em>Terms of Business.</em></h3>
+        <p>
+          This page is a summary of the practice's standard engagement framework, intended to give prospective clients a clear understanding of how work is structured before getting in touch.
+        </p>
+        <p>
+          The full <strong>Letter of Engagement</strong> and <strong>Terms of Business</strong> (including detailed provisions on services, fees, liability, intellectual property, anti-money laundering, complaints, data protection, and other matters) are issued in writing before any instruction commences. A copy is available on request in advance of engagement if you'd like to see it.
+        </p>
+        <p>
+          Related: <a href="compliance.html">Compliance &amp; Regulation</a> · <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Ready to start?</div>
+    <h2 class="cta-title">Get in <em>touch.</em></h2>
+    <p class="cta-sub">
+      First step is a conversation. No obligation, no engagement letter at the end of the call. Just a chat about what you're working on.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="disputes.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates.html">Business Rates Appeals &amp; Mitigation</a></li>
+          <li><a href="valuations.html">Property Valuations</a></li>
+          <li><a href="property-management.html">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates Appeals &amp; Mitigation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="engagement.html">Engagement</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

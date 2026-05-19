@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== INSIGHTS PAGE ===== */
+
+  /* Articles feed - editorial list of insight pieces */
+  .articles {
+    padding: 100px 48px;
+    background: var(--cream);
+    border-top: 1px solid var(--grey-300);
+  }
+  .articles-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .articles-header {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 96px;
+    margin-bottom: 64px;
+    align-items: start;
+  }
+  .articles-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .articles-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .articles-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .articles-intro {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2vw, 26px);
+    line-height: 1.5;
+    color: var(--navy-soft);
+    letter-spacing: -0.3px;
+    font-style: italic;
+  }
+
+  /* Individual article cards */
+  .article-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .article {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 96px;
+    padding: 56px 0;
+    border-top: 1px solid var(--grey-300);
+    align-items: start;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.3s ease;
+  }
+  .article:hover {
+    background: var(--paper);
+    margin: 0 -32px;
+    padding: 56px 32px;
+  }
+  .article:last-child {
+    border-bottom: 1px solid var(--grey-300);
+  }
+
+  .article-meta {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 4px;
+  }
+  .article-meta-date {
+    color: var(--navy-soft);
+    margin-top: 8px;
+    letter-spacing: 1.5px;
+  }
+  .article-content {
+    max-width: 700px;
+  }
+  .article-title {
+    font-family: var(--serif);
+    font-size: clamp(26px, 2.8vw, 36px);
+    line-height: 1.2;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    margin-bottom: 16px;
+    transition: color 0.3s ease;
+  }
+  .article-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .article:hover .article-title {
+    color: var(--terracotta);
+  }
+  .article-summary {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--grey-700);
+    margin-bottom: 20px;
+  }
+  .article-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .article:hover .article-link {
+    color: var(--terracotta);
+  }
+
+  @media (max-width: 1024px) {
+    .articles-header,
+    .article {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .articles-header { gap: 24px; }
+    .article { gap: 12px; }
+    .articles-label::before { display: none; }
+    .article:hover { margin: 0; padding: 56px 0; background: transparent; }
+  }
+
+  /* Worth Reading section - curated industry links */
+  .worth-reading {
+    padding: 80px 48px 100px;
+    background: var(--paper);
+  }
+  .worth-reading-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .worth-reading-header {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 96px;
+    margin-bottom: 56px;
+    align-items: start;
+  }
+  .worth-reading-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .worth-reading-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .worth-reading-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .worth-reading-intro {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.55;
+    color: var(--navy-soft);
+    letter-spacing: -0.2px;
+  }
+
+  .reading-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .reading-item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 96px;
+    padding: 32px 0;
+    border-top: 1px solid var(--grey-300);
+    align-items: start;
+  }
+  .reading-item:last-child {
+    border-bottom: 1px solid var(--grey-300);
+  }
+  .reading-source {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 4px;
+  }
+  .reading-source-date {
+    color: var(--navy-soft);
+    margin-top: 8px;
+    letter-spacing: 1.5px;
+  }
+  .reading-content a {
+    font-family: var(--serif);
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  .reading-content a:hover {
+    color: var(--terracotta);
+  }
+  .reading-note {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--navy-soft);
+    margin-top: 6px;
+  }
+
+  @media (max-width: 1024px) {
+    .worth-reading-header,
+    .reading-item {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .worth-reading-header { gap: 24px; }
+    .worth-reading-label::before { display: none; }
+  }
+
+  /* Follow section - social links */
+  .follow {
+    padding: 100px 48px;
+    background: var(--paper);
+    border-top: 1px solid var(--grey-300);
+  }
+  .follow-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .follow-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .follow-label::before,
+  .follow-label::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .follow-title {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.15;
+    color: var(--navy);
+    letter-spacing: -0.6px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .follow-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .follow-sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(16px, 1.6vw, 19px);
+    line-height: 1.55;
+    color: var(--navy-soft);
+    max-width: 620px;
+    margin: 0 auto 48px;
+    letter-spacing: -0.2px;
+  }
+  .follow-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .follow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 28px;
+    background: transparent;
+    border: 1px solid var(--navy);
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  .follow-link:hover {
+    background: var(--navy);
+    color: var(--cream);
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="landlord.html">Services</a>
+    <a href="properties.html">Properties</a>
+    <a href="insights.html" class="active">Insights</a>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Insights</span>
+    </div>
+    <div class="hero-eyebrow">Thoughts &amp; observations</div>
+    <h1 class="hero-headline">Insights &amp; <em>Industry Commentary.</em></h1>
+    <p class="hero-sub">
+      Short pieces on what's happening in commercial property, and what it means for the people I work with.<br>
+      <em>Published when there's something worth saying.</em>
+    </p>
+  </div>
+</section>
+
+<!-- WORTH READING -->
+<section class="worth-reading">
+  <div class="worth-reading-inner">
+
+    <div class="worth-reading-header">
+      <div class="worth-reading-label">
+        Worth reading
+        <div class="worth-reading-label-sub">From across the industry.</div>
+      </div>
+      <p class="worth-reading-intro">
+        Pieces from elsewhere in the industry that I think are worth your time. Not my writing. Just my recommendation.
+      </p>
+    </div>
+
+    <ul class="reading-list">
+
+      <!-- PLACEHOLDER LINK 1 -->
+      <li class="reading-item">
+        <div class="reading-source">
+          RICS
+          <div class="reading-source-date">Sample</div>
+        </div>
+        <div class="reading-content">
+          <a href="#">Latest RICS guidance on commercial valuation methodology →</a>
+          <p class="reading-note">Worth a read if you're commissioning valuations or want to understand what should be in one.</p>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+
+<!-- ARTICLES FEED -->
+<section class="articles">
+  <div class="articles-inner">
+
+    <div class="articles-header">
+      <div class="articles-label">
+        Recent thinking
+        <div class="articles-label-sub">From the practice.</div>
+      </div>
+      <p class="articles-intro">
+        Short, focused pieces on commercial property matters affecting landlords and tenants. Written when I've got something to say, not on a schedule.
+      </p>
+    </div>
+
+    <div class="article-list">
+
+      <!-- PLACEHOLDER ARTICLE 1 -->
+      <a href="#" class="article">
+        <div class="article-meta">
+          Rent Reviews · Landlord
+          <div class="article-meta-date">Sample</div>
+        </div>
+        <div class="article-content">
+          <h2 class="article-title">Why most rent review proposals don't survive <em>five minutes of scrutiny.</em></h2>
+          <p class="article-summary">A surprising number of rent review proposals are built on thin evidence and weaker reasoning. A short note on what good landlord advisors actually look for, and where most tenant pushback should start.</p>
+          <span class="article-link">Read the piece →</span>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOLLOW -->
+<section class="follow">
+  <div class="follow-inner">
+    <div class="follow-label">Stay in touch</div>
+    <h2 class="follow-title">Follow the <em>practice.</em></h2>
+    <p class="follow-sub">
+      Most of my live thinking is on LinkedIn. Quick reactions, market commentary, and the occasional thread on a recent instruction.
+    </p>
+    <div class="follow-links">
+      <a href="https://www.linkedin.com/in/rob-haigh-mrics-85b95a59/" target="_blank" rel="noopener" class="follow-link">
+        LinkedIn (Rob)
+      </a>
+      <a href="https://www.linkedin.com/company/rh-chartered-surveyors/" target="_blank" rel="noopener" class="follow-link">
+        LinkedIn (Practice)
+      </a>
+      <a href="https://www.instagram.com/rhcharteredsurveyors/" target="_blank" rel="noopener" class="follow-link">
+        Instagram
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61572031506417" target="_blank" rel="noopener" class="follow-link">
+        Facebook
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Start the conversation</div>
+    <h2 class="cta-title">Got a property <em>question?</em></h2>
+    <p class="cta-sub">
+      If something I've written sparks a thought about your own portfolio or premises, get in touch. Call, email, or WhatsApp.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="disputes.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates.html">Business Rates Appeals &amp; Mitigation</a></li>
+          <li><a href="valuations.html">Property Valuations</a></li>
+          <li><a href="property-management.html">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates Appeals &amp; Mitigation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="#">Compliance</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategic Reviews (Tenants) — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== Page-specific overrides ===== */
+
+  /* "Paid advice, properly delivered" — quieter cream pause section */
+  .honest {
+    padding: 110px 48px;
+    background: var(--cream);
+  }
+  .honest-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .honest-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .honest-label::before,
+  .honest-label::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .honest-title {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.15;
+    color: var(--navy);
+    letter-spacing: -0.8px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  .honest-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .honest-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.6;
+    color: var(--navy-soft);
+    max-width: 760px;
+    margin: 0 auto;
+    letter-spacing: -0.2px;
+  }
+
+  /* Invitation section */
+  .invitation {
+    padding: 80px 48px 0;
+    background: var(--paper);
+  }
+  .invitation-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--grey-300);
+  }
+  .invitation-text {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.4vw, 32px);
+    line-height: 1.45;
+    color: var(--navy);
+    font-weight: 400;
+    letter-spacing: -0.4px;
+  }
+  .invitation-text em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="tenant.html" class="active">Services</a>
+    <a href="index.html#properties">Properties</a>
+    <a href="index.html#insights">Insights</a>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="tenant.html">Tenant Advice</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Strategic Reviews</span>
+    </div>
+    <div class="hero-eyebrow">Tenant Service · 03</div>
+    <h1 class="hero-headline">Strategic <em>Reviews.</em></h1>
+    <p class="hero-sub">
+      An independent, considered second opinion when a property decision needs real thought. Not a transaction. <em>Just honest advice on what you're actually facing.</em>
+    </p>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="case-studies">
+  <div class="case-studies-inner">
+    <div class="case-studies-header">
+      <div>
+        <div class="case-studies-label">Recent instructions</div>
+        <h2 class="case-studies-title">Real thinking, <em>real clarity.</em></h2>
+      </div>
+      <p class="case-studies-intro">Three recent reviews where independent analysis stopped clients spending money on weak cases.</p>
+    </div>
+    <div class="case-studies-grid">
+
+      <a href="case-business-rates-risk-analysis.html" class="case-study">
+        <div class="case-study-image">
+          <div>
+            <div class="tile-eyebrow">Risk Avoided</div>
+            <div class="tile-number"><em>Don't challenge</em></div>
+            <div class="tile-result-label">liability could have increased</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Detailed analysis across warehouse and office found assessments fair, with downside risk if challenged</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Business Rates Review · Multi-Site</div>
+        <h3 class="case-study-title">Green &amp; Brown Ltd, Yorkshire</h3>
+        <p class="case-study-summary">Multi-site occupier wanting to challenge rates assessments. Detailed analysis flagged a real risk of increased liability.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-priory-industrial-estate-worksop.html" class="case-study">
+        <div class="case-study-image cream-tile">
+          <div>
+            <div class="tile-eyebrow">Renewal Settled</div>
+            <div class="tile-number"><em>£26,000</em></div>
+            <div class="tile-result-label">value found in lease terms instead</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">Rent confirmed fair, focus redirected to rent-free, schedule of condition, EPC protection, break option</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Lease Renewal · Industrial</div>
+        <h3 class="case-study-title">1–7 Priory Industrial Estate, Worksop</h3>
+        <p class="case-study-summary">Rent was fair. The wider lease terms weren't. Negotiations redirected to where the real value sat.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+      <a href="case-multi-property-industrial-rates.html" class="case-study">
+        <div class="case-study-image">
+          <div>
+            <div class="tile-eyebrow">Future Exposure</div>
+            <div class="tile-number"><em>£20k+</em></div>
+            <div class="tile-result-label">annual liability flagged ahead</div>
+            <div class="tile-divider"></div>
+            <div class="tile-context">High-risk mitigation strategy identified and declined. Client planned ahead with full visibility.</div>
+          </div>
+        </div>
+        <div class="case-study-tag">Business Rates Review · Industrial Portfolio</div>
+        <h3 class="case-study-title">Multi-Property Industrial Portfolio</h3>
+        <p class="case-study-summary">Future business rates liability identified across interconnected buildings. High-risk mitigation strategies advised against.</p>
+        <span class="case-study-link">Read the case study →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- INVITATION -->
+<section class="invitation">
+  <div class="invitation-inner">
+    <p class="invitation-text">
+      A Strategic Review is often the <em>easiest way</em> to start working together. You get a considered view on a specific situation. I get to understand how you think.<br><br>
+      <em>If further work flows from it, it flows.</em>
+    </p>
+  </div>
+</section>
+
+<!-- INTRO / WHAT THIS WORK INVOLVES -->
+<section class="intro">
+  <div class="intro-inner">
+    <div class="intro-label">
+      What this work involves
+      <div class="intro-label-sub">An honest read of where you stand.</div>
+    </div>
+    <div class="intro-prose">
+      <p class="lead">Sometimes the right next step <em>isn't obvious.</em></p>
+      <p>
+        The rent review proposal on the table is troubling but you're not sure whether it's actually high. You've been offered a new lease and can't tell if the terms are fair. You've been approached about an early exit and don't know whether to engage or resist. You're weighing up relocation versus renewal and need someone who'll look at the whole picture, not just the deal in front of you.
+      </p>
+      <p class="emphasis">
+        In those moments, what you need isn't a transaction.
+      </p>
+      <p>
+        You need focused, independent advice that looks at where you actually stand, tells you plainly what the options are, and helps you decide what to do. <strong>That's what a Strategic Review is.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who">
+  <div class="who-inner">
+    <div class="who-label">
+      Who this is for
+      <div class="who-label-sub">Tenants with a decision to make.</div>
+    </div>
+    <div class="who-prose">
+      <p>
+        Tenants facing a decision that isn't straightforward. A proposal that looks wrong, but you're not sure if it is. An offer you don't know whether to accept. A situation where you'd value a plain, independent read before you commit to a position.
+      </p>
+      <p>
+        If you're wrestling with something and want an <strong>outside view</strong>, get in touch.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH — 6 PRINCIPLES -->
+<section class="approach">
+  <div class="approach-inner">
+    <div class="approach-header">
+      <h2 class="approach-title">How I <em>approach it.</em></h2>
+      <p class="approach-intro">Six principles that shape every Strategic Review I undertake for tenants, regardless of sector or property type.</p>
+    </div>
+    <div class="approach-grid">
+
+      <div class="approach-item">
+        <div class="approach-num">01</div>
+        <div class="approach-name">Understand what you're <em>actually deciding.</em></div>
+        <div class="approach-desc">The framing of the question shapes the usefulness of the answer. The first conversation is usually about getting that framing right.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">02</div>
+        <div class="approach-name">Look at the <em>full picture.</em></div>
+        <div class="approach-desc">Lease terms, market evidence, business context, alternative options, realistic outcomes. Not just the immediate question, but everything around it.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">03</div>
+        <div class="approach-name">Name what <em>matters.</em></div>
+        <div class="approach-desc">What's actually driving the decision, where the risks sit, what the real options are. The signal, separated from the noise.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">04</div>
+        <div class="approach-name">Show the <em>working.</em></div>
+        <div class="approach-desc">You don't just get the conclusion. You get the reasoning, the evidence, and the assumptions underneath it. So you can challenge it, build on it, or revisit it later.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">05</div>
+        <div class="approach-name">Give you a plain <em>recommendation.</em></div>
+        <div class="approach-desc">A review that ends in "it depends" isn't a review. I'll tell you what I think, why, and what I'd do if it were my business.</div>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-num">06</div>
+        <div class="approach-name">Sometimes the advice is <em>"don't".</em></div>
+        <div class="approach-desc">Some positions look fightable but aren't. Some offers look worse than they are. The value of independent advice is hearing that plainly, before you spend money pursuing a weak case.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PAID ADVICE, PROPERLY DELIVERED -->
+<section class="honest">
+  <div class="honest-inner">
+    <div class="honest-label">An honest position</div>
+    <h2 class="honest-title">Paid advice, <em>properly delivered.</em></h2>
+    <p class="honest-text">
+      A Strategic Review is a charged piece of work. That matters, because it means the advice is genuinely independent. Not shaped by the prospect of a transaction fee at the end. You're paying for thinking, and you get exactly that.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Start the conversation</div>
+    <h2 class="cta-title">Tell me what you're <em>wrestling with.</em></h2>
+    <p class="cta-sub">
+      If you've got a situation you'd benefit from an outside read on, get in touch. Often the first conversation is enough to tell us whether a formal review is needed at all.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="#">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="#">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="#">Valuations</a></li>
+          <li><a href="#">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="#">Disputes</a></li>
+          <li><a href="#">Business Rates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Properties</a></li>
+          <li><a href="#">Compliance</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

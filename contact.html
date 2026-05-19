@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — RH Chartered Surveyors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== CONTACT PAGE ===== */
+
+  /* Generous three-method contact block (bigger than standard CTA) */
+  .contact-methods-section {
+    padding: 60px 48px 100px;
+    background: var(--paper);
+  }
+  .contact-methods-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .contact-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .contact-method-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    background: var(--cream);
+    padding: 56px 40px;
+    border: 1px solid var(--grey-300);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-method-card:hover {
+    background: var(--navy);
+    color: var(--cream);
+    border-color: var(--navy);
+    transform: translateY(-4px);
+  }
+  .contact-method-icon {
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .contact-method-icon::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .contact-method-name {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    color: var(--navy);
+    transition: color 0.4s ease;
+  }
+  .contact-method-card:hover .contact-method-name {
+    color: var(--cream);
+  }
+  .contact-method-detail {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--navy-soft);
+    margin-bottom: 32px;
+    flex-grow: 1;
+    transition: color 0.4s ease;
+  }
+  .contact-method-card:hover .contact-method-detail {
+    color: rgba(245, 241, 235, 0.85);
+  }
+  .contact-method-action {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.4s ease;
+    padding-top: 24px;
+    border-top: 1px solid var(--grey-300);
+  }
+  .contact-method-card:hover .contact-method-action {
+    color: var(--terracotta-soft);
+    border-top-color: rgba(245, 241, 235, 0.2);
+  }
+  .contact-method-arrow {
+    transition: transform 0.4s ease;
+  }
+  .contact-method-card:hover .contact-method-arrow {
+    transform: translateX(6px);
+  }
+
+  /* Office address block */
+  .office {
+    padding: 100px 48px;
+    background: var(--cream);
+    border-top: 1px solid var(--grey-300);
+  }
+  .office-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+  .office-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .office-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .office-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .office-address {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.2vw, 30px);
+    line-height: 1.5;
+    color: var(--navy);
+    letter-spacing: -0.3px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+  .office-address em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .office-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 32px;
+    background: var(--navy);
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  .office-link:hover {
+    background: var(--terracotta);
+  }
+  .office-note {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--navy-soft);
+    margin-top: 32px;
+    letter-spacing: -0.1px;
+    line-height: 1.55;
+  }
+
+  /* What happens — framing section */
+  .what-happens {
+    padding: 110px 48px;
+    background: var(--paper);
+    border-top: 1px solid var(--grey-300);
+  }
+  .what-happens-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .what-happens-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+  .what-happens-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .what-happens-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .what-happens-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .what-happens-content {
+    max-width: 720px;
+  }
+  .what-happens-title {
+    font-family: var(--serif);
+    font-size: clamp(30px, 3.4vw, 44px);
+    line-height: 1.2;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    margin-bottom: 40px;
+  }
+  .what-happens-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .what-happens-prose p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--grey-700);
+    margin-bottom: 24px;
+  }
+  .what-happens-prose strong {
+    color: var(--navy);
+    font-weight: 500;
+  }
+
+  @media (max-width: 1024px) {
+    .contact-methods-grid {
+      grid-template-columns: 1fr;
+    }
+    .office-inner,
+    .what-happens-row {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .office-label::before,
+    .what-happens-label::before {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">RH</div>
+    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="landlord.html">Services</a>
+    <a href="properties.html">Properties</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="nav-cta active">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Contact</span>
+    </div>
+    <div class="hero-eyebrow">Get in touch</div>
+    <h1 class="hero-headline">Tell me about <em>your situation.</em></h1>
+    <p class="hero-sub">
+      Pick whichever method suits you. Call, email, or WhatsApp.<br>
+      <em>We'll work out whether I can help.</em>
+    </p>
+  </div>
+</section>
+
+<!-- THREE CONTACT METHODS -->
+<section class="contact-methods-section">
+  <div class="contact-methods-inner">
+    <div class="contact-methods-grid">
+
+      <a href="tel:07980056973" class="contact-method-card">
+        <div class="contact-method-icon">Direct line</div>
+        <div class="contact-method-name">Call.</div>
+        <p class="contact-method-detail">The fastest way through. Most enquiries are easier handled in five minutes on the phone than in five emails over a week.</p>
+        <div class="contact-method-action">
+          07980 056973
+          <span class="contact-method-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="contact-method-card">
+        <div class="contact-method-icon">Email</div>
+        <div class="contact-method-name">Write.</div>
+        <p class="contact-method-detail">Prefer to put it in writing? Send me a brief email. No template required, no formality expected. I'll reply with whatever's useful.</p>
+        <div class="contact-method-action">
+          rob@rhcharteredsurveyors.co.uk
+          <span class="contact-method-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="https://wa.me/447980056973" class="contact-method-card">
+        <div class="contact-method-icon">WhatsApp</div>
+        <div class="contact-method-name">Message.</div>
+        <p class="contact-method-detail">Send a message, share a document, drop a photo of the property. Good for quick questions or anything you'd rather not phrase formally.</p>
+        <div class="contact-method-action">
+          Open WhatsApp
+          <span class="contact-method-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- OFFICE ADDRESS -->
+<section class="office">
+  <div class="office-inner">
+    <div class="office-label">
+      Office
+      <div class="office-label-sub">Visit, if you'd like.</div>
+    </div>
+    <div>
+      <p class="office-address">
+        12A Southwell Business Centre,<br>
+        Crew Lane, Southwell,<br>
+        Nottinghamshire <em>NG25 0TX</em>
+      </p>
+      <a href="https://www.google.com/maps/search/?api=1&query=12A+Southwell+Business+Centre,+Crew+Lane,+Southwell,+NG25+0TX" target="_blank" rel="noopener" class="office-link">
+        Get directions
+        <span>→</span>
+      </a>
+      <p class="office-note">
+        Based in Southwell, Nottinghamshire. Working with clients nationwide. Visits to the office are by appointment.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS WHEN YOU GET IN TOUCH -->
+<section class="what-happens">
+  <div class="what-happens-inner">
+    <div class="what-happens-row">
+      <div class="what-happens-label">
+        What happens next
+        <div class="what-happens-label-sub">A conversation, first.</div>
+      </div>
+      <div class="what-happens-content">
+        <h2 class="what-happens-title">Conversation first. <em>No obligation.</em></h2>
+        <div class="what-happens-prose">
+          <p>
+            The first conversation is exactly that. <strong>A conversation.</strong> You tell me what you're working on or wrestling with, and I'll tell you whether I think I can help. There's no formal pitch, no engagement letter at the end of the call, no obligation to take it any further.
+          </p>
+          <p>
+            If it's a fit, we'll work out scope and fees together before any work starts. If it isn't, I'll tell you that plainly. Sometimes I'll point you to someone better placed to help, or suggest the matter doesn't actually need a surveyor at all.
+          </p>
+          <p>
+            <strong>Send me whatever you've got.</strong> A lease, a proposal, a rateable value, a screenshot of a difficult email. Anything that helps me understand the situation before we speak. I'll read it before the call so the conversation is useful from the first minute.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-mark">RH</div>
+          <div class="footer-logo-text">RH Chartered Surveyors</div>
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="disputes.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates.html">Business Rates Appeals &amp; Mitigation</a></li>
+          <li><a href="valuations.html">Property Valuations</a></li>
+          <li><a href="property-management.html">Property Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Landlord &amp; Tenant Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates Appeals &amp; Mitigation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="#">Compliance</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
