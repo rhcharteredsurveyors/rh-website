@@ -1996,3 +1996,159 @@
 .case-study:hover .case-study-title {
   color: var(--terracotta);
 }
+
+
+/* ===== MOBILE NAV + LAYOUT ADJUSTMENTS ===== */
+
+/* The nav grew to 100px; hero pages need padding-top to clear it */
+.hero {
+  padding-top: 150px;
+}
+
+/* Footer logo: shrink on mobile so it fits comfortably on phone widths */
+@media (max-width: 768px) {
+  .footer-logo img {
+    height: 70px;
+  }
+}
+
+/* ===== HAMBURGER BUTTON (terracotta, mobile only) ===== */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  z-index: 1001;
+  position: relative;
+}
+
+.nav-toggle-line {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--terracotta);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* When body has .menu-open, animate the lines into an X */
+body.menu-open .nav-toggle-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+body.menu-open .nav-toggle-line:nth-child(2) {
+  opacity: 0;
+}
+body.menu-open .nav-toggle-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== MOBILE MENU OVERLAY ===== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--navy);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+body.menu-open .mobile-menu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.mobile-menu-link {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease, color 0.2s ease;
+}
+
+body.menu-open .mobile-menu-link {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Stagger the entrance animation slightly */
+body.menu-open .mobile-menu-link:nth-child(1) { transition-delay: 0.1s; }
+body.menu-open .mobile-menu-link:nth-child(2) { transition-delay: 0.15s; }
+body.menu-open .mobile-menu-link:nth-child(3) { transition-delay: 0.2s; }
+body.menu-open .mobile-menu-link:nth-child(4) { transition-delay: 0.25s; }
+body.menu-open .mobile-menu-link:nth-child(5) { transition-delay: 0.3s; }
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  color: var(--terracotta);
+}
+
+/* The "Get in Touch" CTA item in the mobile menu: styled like the nav CTA */
+.mobile-menu-link-cta {
+  border: 1px solid var(--cream);
+  border-radius: 999px;
+  padding: 14px 36px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: var(--sans);
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+.mobile-menu-link-cta:hover,
+.mobile-menu-link-cta:focus {
+  background: var(--cream);
+  color: var(--navy);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+@media (max-width: 768px) {
+  /* Show the hamburger button */
+  .nav-toggle {
+    display: flex;
+  }
+  /* Hide the desktop nav links */
+  .nav-links {
+    display: none;
+  }
+  /* Nav layout on mobile: logo on the left, hamburger pushed to the right */
+  .nav {
+    padding: 16px 24px;
+  }
+  /* Hero padding adjusts for smaller nav on mobile */
+  .hero {
+    padding-top: 110px;
+  }
+}

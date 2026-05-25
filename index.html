@@ -1273,7 +1273,147 @@
       gap: 40px;
     }
   }
-</style>
+
+
+  /* ===== MOBILE NAV + LAYOUT ADJUSTMENTS ===== */
+
+  /* Footer logo: shrink on mobile so it fits comfortably on phone widths */
+  @media (max-width: 768px) {
+    .footer-logo img {
+      height: 70px;
+    }
+  }
+
+  /* ===== HAMBURGER BUTTON (terracotta, mobile only) ===== */
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+    z-index: 1001;
+    position: relative;
+  }
+
+  .nav-toggle-line {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--terracotta);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  body.menu-open .nav-toggle-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  body.menu-open .nav-toggle-line:nth-child(2) {
+    opacity: 0;
+  }
+  body.menu-open .nav-toggle-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* ===== MOBILE MENU OVERLAY ===== */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--navy);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  body.menu-open .mobile-menu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .mobile-menu-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .mobile-menu-link {
+    font-family: var(--serif);
+    font-size: 28px;
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease, color 0.2s ease;
+  }
+
+  body.menu-open .mobile-menu-link {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  body.menu-open .mobile-menu-link:nth-child(1) { transition-delay: 0.1s; }
+  body.menu-open .mobile-menu-link:nth-child(2) { transition-delay: 0.15s; }
+  body.menu-open .mobile-menu-link:nth-child(3) { transition-delay: 0.2s; }
+  body.menu-open .mobile-menu-link:nth-child(4) { transition-delay: 0.25s; }
+  body.menu-open .mobile-menu-link:nth-child(5) { transition-delay: 0.3s; }
+
+  .mobile-menu-link:hover,
+  .mobile-menu-link:focus {
+    color: var(--terracotta);
+  }
+
+  .mobile-menu-link-cta {
+    border: 1px solid var(--cream);
+    border-radius: 999px;
+    padding: 14px 36px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--sans);
+    font-weight: 500;
+    margin-top: 16px;
+  }
+
+  .mobile-menu-link-cta:hover,
+  .mobile-menu-link-cta:focus {
+    background: var(--cream);
+    color: var(--navy);
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: flex;
+    }
+    .nav-links {
+      display: none;
+    }
+    .nav {
+      padding: 16px 24px;
+    }
+  }
+
+  </style>
   <!-- ===== Favicon + Open Graph (added by logo integration) ===== -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -1313,7 +1453,47 @@
     <a href="#insights">Insights</a>
     <a href="#contact" class="nav-cta">Get in touch</a>
   </div>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+  </button>
 </nav>
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a href="about.html" class="mobile-menu-link">About Rob</a>
+    <a href="index.html#paths" class="mobile-menu-link">Services</a>
+    <a href="properties.html" class="mobile-menu-link">Properties</a>
+    <a href="insights.html" class="mobile-menu-link">Insights</a>
+    <a href="contact.html" class="mobile-menu-link mobile-menu-link-cta">Get in Touch</a>
+  </div>
+</div>
+
+<!-- Mobile menu toggle script -->
+<script>
+  (function() {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+      const isOpen = document.body.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    });
+    // Close menu when a menu link is tapped
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        menu.setAttribute('aria-hidden', 'true');
+      });
+    });
+  })();
+</script>
 
 <!-- ==================== HERO ==================== -->
 <section class="hero">
@@ -1618,17 +1798,20 @@
         <ul>
           <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
           <li><a href="acquisitions.html">Acquisitions</a></li>
-          <li><a href="sales-lettings.html">Sales & Lettings</a></li>
-          <li><a href="lease-renewals.html">Lease Renewals & Rent Reviews</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
           <li><a href="valuations.html">Valuations</a></li>
+          <li><a href="disputes.html">Disputes</a></li>
           <li><a href="property-management.html">Property Management</a></li>
+          <li><a href="business-rates.html">Business Rates</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Tenants</div>
         <ul>
-          <li><a href="lease-renewals.html">Lease Renewals & Rent Reviews</a></li>
-          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions & Exits</a></li>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
           <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
           <li><a href="disputes-tenant.html">Disputes</a></li>
           <li><a href="business-rates-tenant.html">Business Rates</a></li>

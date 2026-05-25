@@ -278,7 +278,47 @@
     <a href="insights.html">Insights</a>
     <a href="contact.html" class="nav-cta">Get in touch</a>
   </div>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+  </button>
 </nav>
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a href="about.html" class="mobile-menu-link">About Rob</a>
+    <a href="index.html#paths" class="mobile-menu-link">Services</a>
+    <a href="properties.html" class="mobile-menu-link">Properties</a>
+    <a href="insights.html" class="mobile-menu-link">Insights</a>
+    <a href="contact.html" class="mobile-menu-link mobile-menu-link-cta">Get in Touch</a>
+  </div>
+</div>
+
+<!-- Mobile menu toggle script -->
+<script>
+  (function() {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+      const isOpen = document.body.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    });
+    // Close menu when a menu link is tapped
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        menu.setAttribute('aria-hidden', 'true');
+      });
+    });
+  })();
+</script>
 
 <!-- HERO -->
 <section class="hero">
@@ -445,10 +485,10 @@
           <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
           <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
           <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
-          <li><a href="disputes.html">Landlord &amp; Tenant Disputes</a></li>
-          <li><a href="business-rates.html">Business Rates Appeals &amp; Mitigation</a></li>
-          <li><a href="valuations.html">Property Valuations</a></li>
+          <li><a href="valuations.html">Valuations</a></li>
+          <li><a href="disputes.html">Disputes</a></li>
           <li><a href="property-management.html">Property Management</a></li>
+          <li><a href="business-rates.html">Business Rates</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -457,8 +497,8 @@
           <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
           <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
           <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
-          <li><a href="disputes-tenant.html">Landlord &amp; Tenant Disputes</a></li>
-          <li><a href="business-rates-tenant.html">Business Rates Appeals &amp; Mitigation</a></li>
+          <li><a href="disputes-tenant.html">Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates</a></li>
         </ul>
       </div>
       <div class="footer-col">
