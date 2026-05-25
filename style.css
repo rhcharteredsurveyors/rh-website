@@ -2002,7 +2002,7 @@
 
 /* The nav grew to 100px; hero pages need padding-top to clear it */
 .hero {
-  padding-top: 150px;
+  padding-top: 170px;
 }
 
 /* Footer logo: shrink on mobile so it fits comfortably on phone widths */
@@ -2149,6 +2149,6 @@ body.menu-open .mobile-menu-link:nth-child(5) { transition-delay: 0.3s; }
   }
   /* Hero padding adjusts for smaller nav on mobile */
   .hero {
-    padding-top: 110px;
+    padding-top: 125px;
   }
 }
