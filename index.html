@@ -62,47 +62,20 @@
   .nav-logo {
     display: flex;
     align-items: center;
-    gap: 14px;
-    color: var(--paper);
     text-decoration: none;
-    transition: color 0.4s ease;
-  }
-
-  .nav.scrolled .nav-logo { color: var(--navy); }
-
-  .nav-logo-mark {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--navy);
-    border: 2px solid var(--terracotta);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--serif);
-    font-weight: 600;
-    color: var(--terracotta);
-    font-size: 18px;
-    letter-spacing: -0.5px;
     flex-shrink: 0;
   }
 
-  .nav-logo-text {
-    font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 0.2px;
-    line-height: 1;
+  .nav-logo img {
+    height: 100px;
+    width: auto;
+    display: block;
   }
 
-  .nav-logo-text small {
-    display: block;
-    font-family: var(--sans);
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 4px;
-    opacity: 0.7;
+  @media (max-width: 768px) {
+    .nav-logo img {
+      height: 80px;
+    }
   }
 
   .nav-links {
@@ -1174,32 +1147,13 @@
   }
 
   .footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 14px;
     margin-bottom: 24px;
   }
 
-  .footer-logo-mark {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: transparent;
-    border: 2px solid var(--terracotta);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--serif);
-    font-weight: 600;
-    color: var(--terracotta);
-    font-size: 18px;
-    letter-spacing: -0.5px;
-  }
-
-  .footer-logo-text {
-    font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 500;
+  .footer-logo img {
+    height: 120px;
+    width: auto;
+    display: block;
   }
 
   .footer-tagline {
@@ -1320,17 +1274,37 @@
     }
   }
 </style>
+  <!-- ===== Favicon + Open Graph (added by logo integration) ===== -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RH Chartered Surveyors">
+  <meta property="og:title" content="RH Chartered Surveyors — Commercial Property Advice. Delivered Personally.">
+  <meta property="og:description" content="Commercial property advice from RH Chartered Surveyors. Founder-led practice run by Rob Haigh MRICS — when you hire him, you get him. From first conversation to final outcome.">
+  <meta property="og:url" content="https://rhcharteredsurveyors.co.uk/">
+  <meta property="og:image" content="https://rhcharteredsurveyors.co.uk/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RH Chartered Surveyors — Commercial Property Advice. Delivered Personally.">
+  <meta name="twitter:description" content="Commercial property advice from RH Chartered Surveyors. Founder-led practice run by Rob Haigh MRICS — when you hire him, you get him. From first conversation to final outcome.">
+  <meta name="twitter:image" content="https://rhcharteredsurveyors.co.uk/assets/og-image.png">
+
+  <link rel="canonical" href="https://rhcharteredsurveyors.co.uk/">
 </head>
 <body>
 
 <!-- ==================== NAVIGATION ==================== -->
 <nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">RH</div>
-    <div class="nav-logo-text">
-      RH Chartered Surveyors
-      <small>Commercial Property Advice</small>
-    </div>
+  <a href="index.html" class="nav-logo" aria-label="RH Chartered Surveyors — Home">
+    <img src="assets/logo-nav.svg" alt="RH Chartered Surveyors — Commercial Property Advice. Delivered Personally.">
   </a>
   <div class="nav-links">
     <a href="about.html">About Rob</a>
@@ -1630,8 +1604,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo">
-          <div class="footer-logo-mark">RH</div>
-          <div class="footer-logo-text">RH Chartered Surveyors</div>
+          <img src="assets/logo-footer.svg" alt="RH Chartered Surveyors">
         </div>
         <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
         <div class="footer-credentials">

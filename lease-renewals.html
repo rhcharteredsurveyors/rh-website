@@ -32,10 +32,24 @@
 
   /* NAV */
   .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; display: flex; justify-content: space-between; align-items: center; background: rgba(250, 248, 244, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--grey-100); }
-  .nav-logo { display: flex; align-items: center; gap: 14px; color: var(--navy); text-decoration: none; }
-  .nav-logo-mark { width: 44px; height: 44px; border-radius: 50%; background: var(--navy); border: 2px solid var(--terracotta); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 600; color: var(--terracotta); font-size: 18px; letter-spacing: -0.5px; flex-shrink: 0; }
-  .nav-logo-text { font-family: var(--serif); font-size: 18px; font-weight: 500; line-height: 1; }
-  .nav-logo-text small { display: block; font-family: var(--sans); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; opacity: 0.7; }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .nav-logo img {
+      height: 80px;
+    }
+  }
   .nav-links { display: flex; gap: 32px; align-items: center; }
   .nav-links a { color: var(--navy); text-decoration: none; font-size: 13px; font-weight: 400; letter-spacing: 0.5px; position: relative; }
   .nav-links a.active { color: var(--terracotta); }
@@ -188,17 +202,40 @@
     .footer-grid { grid-template-columns: 1fr; gap: 40px; }
   }
 </style>
+  <!-- ===== Favicon + Open Graph (added by logo integration) ===== -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RH Chartered Surveyors">
+  <meta property="og:title" content="Lease Renewals & Rent Reviews — RH Chartered Surveyors">
+  <meta property="og:description" content="Commercial property advice from RH Chartered Surveyors. Founder-led practice. Direct line to a Chartered Surveyor from first conversation to final outcome.">
+  <meta property="og:url" content="https://rhcharteredsurveyors.co.uk/lease-renewals.html">
+  <meta property="og:image" content="https://rhcharteredsurveyors.co.uk/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lease Renewals & Rent Reviews — RH Chartered Surveyors">
+  <meta name="twitter:description" content="Commercial property advice from RH Chartered Surveyors. Founder-led practice. Direct line to a Chartered Surveyor from first conversation to final outcome.">
+  <meta name="twitter:image" content="https://rhcharteredsurveyors.co.uk/assets/og-image.png">
+
+  <link rel="canonical" href="https://rhcharteredsurveyors.co.uk/lease-renewals.html">
 </head>
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">RH</div>
-    <div class="nav-logo-text">RH Chartered Surveyors<small>Commercial Property Advice</small></div>
+  <a href="index.html" class="nav-logo" aria-label="RH Chartered Surveyors — Home">
+    <img src="assets/logo-nav.svg" alt="RH Chartered Surveyors — Commercial Property Advice. Delivered Personally.">
   </a>
   <div class="nav-links">
     <a href="about.html">About Rob</a>
-    <a href="landlord.html" class="active">Services</a>
+    <a href="index.html#paths" class="active">Services</a>
     <a href="index.html#properties">Properties</a>
     <a href="index.html#insights">Insights</a>
     <a href="index.html#contact" class="nav-cta">Get in touch</a>
@@ -419,8 +456,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo">
-          <div class="footer-logo-mark">RH</div>
-          <div class="footer-logo-text">RH Chartered Surveyors</div>
+          <img src="assets/logo-footer.svg" alt="RH Chartered Surveyors">
         </div>
         <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
         <div class="footer-credentials">
