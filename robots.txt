@@ -1,4 +1,4 @@
-# RH Chartered Surveyors — robots.txt
+# RH Chartered Surveyors - robots.txt
 # Welcome, search engine crawlers.
 
 User-agent: *
