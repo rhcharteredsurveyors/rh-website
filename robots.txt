@@ -1,0 +1,15 @@
+# RH Chartered Surveyors — robots.txt
+# Welcome, search engine crawlers.
+
+User-agent: *
+Allow: /
+
+# Don't index any old/draft files if they're in the repo
+Disallow: /rh-
+Disallow: /*-FINAL.html
+Disallow: /*-v2.html
+Disallow: /*-v3.html
+Disallow: /*-v4.html
+
+# Sitemap location
+Sitemap: https://rhcharteredsurveyors.co.uk/sitemap.xml
