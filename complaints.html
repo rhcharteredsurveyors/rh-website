@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaints Handling Procedure | RH Chartered Surveyors</title>
+  <meta name="description" content="The complaints handling procedure for RH Chartered Surveyors. Two-stage process: internal review, then independent redress. Acknowledgement within three working days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+  <!-- ===== Favicon + Open Graph ===== -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RH Chartered Surveyors">
+  <meta property="og:title" content="Complaints Handling Procedure | RH Chartered Surveyors">
+  <meta property="og:description" content="The complaints handling procedure for RH Chartered Surveyors. Two-stage process: internal review, then independent redress.">
+  <meta property="og:url" content="https://rhcharteredsurveyors.co.uk/complaints.html">
+  <meta property="og:image" content="https://rhcharteredsurveyors.co.uk/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Complaints Handling Procedure | RH Chartered Surveyors">
+  <meta name="twitter:description" content="The complaints handling procedure for RH Chartered Surveyors. Two-stage process: internal review, then independent redress.">
+  <meta name="twitter:image" content="https://rhcharteredsurveyors.co.uk/assets/og-image.png">
+
+  <link rel="canonical" href="https://rhcharteredsurveyors.co.uk/complaints.html">
+
+<style>
+  /* ===== COMPLAINTS PAGE — reuses .legal-section pattern from compliance.html ===== */
+
+  .legal-section {
+    padding: 80px 48px;
+    background: var(--paper);
+  }
+  .legal-section:nth-of-type(even) {
+    background: var(--cream);
+  }
+  .legal-section + .legal-section {
+    border-top: 1px solid var(--grey-300);
+  }
+  .legal-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .legal-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+  .legal-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .legal-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .legal-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .legal-content {
+    max-width: 720px;
+  }
+  .legal-content h3 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.4vw, 32px);
+    line-height: 1.2;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    margin-bottom: 24px;
+  }
+  .legal-content h3 em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .legal-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--grey-700);
+    margin-bottom: 20px;
+  }
+  .legal-content p:last-child {
+    margin-bottom: 0;
+  }
+  .legal-content strong {
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .legal-content a {
+    color: var(--terracotta);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .legal-content a:hover {
+    color: var(--navy);
+  }
+  .legal-content ol {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  .legal-content ol li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 56px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--grey-700);
+    margin-bottom: 24px;
+  }
+  .legal-content ol li:last-child {
+    margin-bottom: 0;
+  }
+  .legal-content ol li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--terracotta);
+    font-weight: 500;
+  }
+  .legal-content ol li strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  /* Print styles - so the page can be saved as PDF cleanly */
+  @media print {
+    .nav, .footer, .nav-toggle, .mobile-menu { display: none !important; }
+    .hero { padding-top: 30px; padding-bottom: 20px; }
+    .legal-section { padding: 30px 0; background: white !important; border: none; }
+    .legal-row { grid-template-columns: 200px 1fr; gap: 40px; }
+    body { color: black; }
+    .legal-content p, .legal-content ol li { font-size: 12pt; line-height: 1.5; }
+    a { color: black !important; text-decoration: underline; }
+    h1, h2, h3 { color: black !important; }
+    .legal-label { color: black !important; }
+    .hero-eyebrow, .legal-label-sub { color: black !important; }
+  }
+
+  @media (max-width: 768px) {
+    .legal-section {
+      padding: 56px 24px;
+    }
+    .legal-row {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .legal-content ol li {
+      padding-left: 0;
+      padding-top: 28px;
+    }
+    .legal-content ol li::before {
+      top: 0;
+    }
+  }
+</style>
+
+  <!-- ===== Schema.org structured data ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RH Chartered Surveyors",
+    "alternateName": "RHCS",
+    "url": "https://rhcharteredsurveyors.co.uk/",
+    "logo": "https://rhcharteredsurveyors.co.uk/assets/logo-nav.svg",
+    "image": "https://rhcharteredsurveyors.co.uk/assets/og-image.png",
+    "description": "Founder-led commercial chartered surveying practice. Senior expertise from a single MRICS adviser for landlords and tenants across the UK.",
+    "founder": {
+      "@type": "Person",
+      "name": "Rob Haigh",
+      "honorificSuffix": "MRICS"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12A Southwell Business Centre, Crew Lane",
+      "addressLocality": "Southwell",
+      "addressRegion": "Nottinghamshire",
+      "postalCode": "NG25 0TX",
+      "addressCountry": "GB"
+    },
+    "telephone": "+44 7980 056973",
+    "email": "rob@rhcharteredsurveyors.co.uk",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Royal Institution of Chartered Surveyors",
+      "url": "https://www.rics.org/"
+    },
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "RICS Membership Number",
+      "value": "5020924"
+    },
+    "sameAs": [
+      "https://share.google/sRdffhiOu1soCqr34"
+    ]
+  }
+  </script>
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-pBVcYl2fnkK8t8OtW9HYf.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo" aria-label="RH Chartered Surveyors — Home">
+    <img src="assets/logo-nav.svg" alt="RH Chartered Surveyors — Commercial Property Advice. Delivered Personally.">
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="index.html#paths">Services</a>
+    <a href="properties.html">Properties</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="nav-cta">Get in Touch</a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+  </button>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a href="about.html" class="mobile-menu-link">About Rob</a>
+    <a href="index.html#paths" class="mobile-menu-link">Services</a>
+    <a href="properties.html" class="mobile-menu-link">Properties</a>
+    <a href="insights.html" class="mobile-menu-link">Insights</a>
+    <a href="contact.html" class="mobile-menu-link mobile-menu-link-cta">Get in Touch</a>
+  </div>
+</div>
+
+<!-- Mobile menu toggle script -->
+<script>
+  (function() {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+      const isOpen = document.body.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        menu.setAttribute('aria-hidden', 'true');
+      });
+    });
+  })();
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="compliance.html">Compliance</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Complaints Handling Procedure</span>
+    </div>
+
+    <div class="hero-eyebrow">A formal process</div>
+    <h1 class="hero-headline">Complaints Handling <em>Procedure.</em></h1>
+    <p class="hero-sub">
+      <em>If something isn't working, I want to know about it,</em> and I want to address it properly.
+    </p>
+  </div>
+</section>
+
+<!-- ===== Section 1 — Opening commitment ===== -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div>
+        <div class="legal-label">Section 01
+          <div class="legal-label-sub">My commitment</div>
+        </div>
+      </div>
+      <div class="legal-content">
+        <h3>The starting point is <em>direct contact</em>.</h3>
+        <p>
+          RH Chartered Surveyors is regulated by the Royal Institution of Chartered Surveyors (RICS). Every regulated firm is required to operate a written complaints handling procedure. This is mine.
+        </p>
+        <p>
+          The practice is run by me personally. If you're unhappy with any aspect of my work, the fastest way to resolve it is usually a conversation. <strong>I'd rather hear about something early, while it can still be put right, than after the fact.</strong> Most concerns are resolved in that first conversation.
+        </p>
+        <p>
+          But sometimes a formal process is the right route. That's what this procedure is for: a clear, time-bound, two-stage path for when something needs to be looked at properly. There's no charge for raising a complaint with me, and it doesn't affect any other rights you may have.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 2 — Stage 1: Internal complaint ===== -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div>
+        <div class="legal-label">Section 02
+          <div class="legal-label-sub">Stage 1: Internal complaint</div>
+        </div>
+      </div>
+      <div class="legal-content">
+        <h3>How to raise a <em>formal complaint</em>.</h3>
+        <p>
+          Put your complaint in writing and send it to me. Please include enough detail for me to investigate properly: what happened, when, who was involved, and what outcome you're looking for.
+        </p>
+        <p>
+          <strong>Send your complaint to:</strong><br>
+          Rob Haigh MRICS, Principal<br>
+          RH Chartered Surveyors<br>
+          12A Southwell Business Centre, Crew Lane, Southwell, Nottinghamshire NG25 0TX<br>
+          Or by email: <a href="mailto:rob@rhcharteredsurveyors.co.uk">rob@rhcharteredsurveyors.co.uk</a>
+        </p>
+        <p>
+          <strong>What happens then:</strong>
+        </p>
+        <ol>
+          <li>
+            <strong>Acknowledgement within 3 working days.</strong>
+            I'll confirm in writing that I've received your complaint, summarise my understanding of it, and tell you who is handling it.
+          </li>
+          <li>
+            <strong>Investigation.</strong>
+            I'll review the file, talk to anyone relevant, and consider the points you've raised. If I need more information from you, I'll come back to you.
+          </li>
+          <li>
+            <strong>Full written response within 28 days of acknowledgement.</strong>
+            This will set out my findings, whether the complaint is upheld in whole or in part, and what I propose to do about it. If the investigation is genuinely taking longer for good reason, I'll write to explain why and give a revised date.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 3 — Stage 2: Independent redress ===== -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div>
+        <div class="legal-label">Section 03
+          <div class="legal-label-sub">Stage 2: Independent dispute resolution</div>
+        </div>
+      </div>
+      <div class="legal-content">
+        <h3>If we can't <em>resolve it together</em>.</h3>
+        <p>
+          If you're not satisfied with my final written response, or if more than eight weeks have passed since you first raised the complaint with me and the matter remains unresolved, you can refer the matter to independent dispute resolution.
+        </p>
+        <p>
+          For matters that can't be resolved between us, I have nominated the <strong>RICS Dispute Resolution Service (DRS)</strong> as my independent dispute resolution provider. DRS is operated by RICS, is independent of this firm, and is the long established provider of alternative dispute resolution in land, property and construction.
+        </p>
+        <p>
+          To take a matter to DRS, contact them directly using the details below. They operate their own process, scheme rules and fees, which you can review on their website. They will expect to see that you've completed Stage 1 of this procedure, or that more than eight weeks have passed without resolution.
+        </p>
+        <p>
+          <strong>Independent dispute resolution provider:</strong><br>
+          RICS Dispute Resolution Service (DRS)<br>
+          Telephone: 020 7334 3806<br>
+          Email: <a href="mailto:drs@rics.org">drs@rics.org</a><br>
+          Web: <a href="https://www.rics.org/dispute-resolution-service" target="_blank" rel="noopener">www.rics.org/dispute-resolution-service</a>
+        </p>
+        <p>
+          DRS offers a range of options including mediation, arbitration, adjudication and expert determination. Depending on the route used, the outcome may be binding on both parties. I will cooperate fully with the process and abide by any binding decision.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 4 — Records and review ===== -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div>
+        <div class="legal-label">Section 04
+          <div class="legal-label-sub">Records and review</div>
+        </div>
+      </div>
+      <div class="legal-content">
+        <h3>How complaints are <em>tracked</em>.</h3>
+        <p>
+          A written record of every formal complaint is kept on the firm's complaints register, including the nature of the complaint, the response, and any action taken. The register is reviewed regularly to identify patterns and improve the service.
+        </p>
+        <p>
+          Records are retained in line with RICS requirements and in compliance with the firm's privacy policy. See the <a href="privacy.html">Privacy Policy</a> for how personal data is handled.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 5 — Other routes ===== -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div>
+        <div class="legal-label">Section 05
+          <div class="legal-label-sub">Other routes</div>
+        </div>
+      </div>
+      <div class="legal-content">
+        <h3>What this procedure <em>doesn't replace</em>.</h3>
+        <p>
+          This procedure is for complaints about the service provided by RH Chartered Surveyors. It does not replace any other rights you may have, including your right to take legal action or to refer professional conduct concerns directly to RICS.
+        </p>
+        <p>
+          <strong>To raise concerns about professional conduct:</strong><br>
+          RICS Regulation handles concerns about the professional conduct of its members and regulated firms. You can report a concern directly to RICS at <a href="https://www.rics.org/regulation/reporting-concerns" target="_blank" rel="noopener">www.rics.org/regulation/reporting-concerns</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 6 — Document control ===== -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-row">
+      <div>
+        <div class="legal-label">Document control
+          <div class="legal-label-sub">Version and updates</div>
+        </div>
+      </div>
+      <div class="legal-content">
+        <p>
+          This procedure is kept under review and is updated whenever there is a material change to the firm's regulated activities or to the relevant RICS requirements. Current version: May 2026.
+        </p>
+        <p>
+          If you'd like a written copy of this procedure, you can save this page as a PDF using your browser's print function (Ctrl+P or Cmd+P, then "Save as PDF"), or I'll happily send you one, just <a href="contact.html">get in touch</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col-brand">
+        <div class="footer-logo">
+          <img src="assets/logo-footer.svg" alt="RH Chartered Surveyors">
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <span class="footer-cred">RICS Regulated</span>
+          <span class="footer-cred">MRICS Chartered</span>
+          <span class="footer-cred">Est. 2019</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="valuations.html">Valuations</a></li>
+          <li><a href="disputes.html">Disputes</a></li>
+          <li><a href="property-management.html">Property Management</a></li>
+          <li><a href="business-rates.html">Business Rates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-legal">
+      <p>&copy; 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</p>
+      <p>RICS Membership No. 5020924</p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

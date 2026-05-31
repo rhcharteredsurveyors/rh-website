@@ -510,11 +510,19 @@
   .path-card:hover .path-card-image::after { opacity: 0.7; }
 
   .path-card-image img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
   }
+
+  /* Both hero images are pre-cropped to 4:3, so they fill the card with no further
+     cropping needed. object-position kept neutral. */
+  .hero-img-tenant { object-position: center center; }
+  .hero-img-landlord { object-position: center center; }
 
   .path-card:hover .path-card-image img { transform: scale(1.05); }
 
@@ -966,8 +974,30 @@
     font-size: 16px;
     line-height: 1.65;
     color: var(--grey-700);
-    padding-bottom: 12px;
+    margin-bottom: 20px;
   }
+
+  .insights-header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 4px;
+  }
+
+  .insights-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 500;
+    transition: gap 0.3s ease;
+  }
+
+  .insights-link:hover { gap: 20px; color: var(--terracotta); }
 
   .insights-grid {
     display: grid;
@@ -1676,7 +1706,7 @@
     <a href="tenant.html" class="path-card">
       <div class="path-card-image">
         <span class="path-card-number">01 / Tenant</span>
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80" alt="Tenant advice — placeholder">
+        <img src="assets/hero-tenant-bridlesmith.jpg" alt="Bridlesmith Gate, Nottingham: prime retail pitch with national and independent occupiers" class="hero-img-tenant">
       </div>
       <div class="path-card-tag">For tenants & business owners</div>
       <h3 class="path-card-title">Lease renewals, rent reviews,<br>relocations, exits.</h3>
@@ -1690,7 +1720,7 @@
     <a href="landlord.html" class="path-card">
       <div class="path-card-image">
         <span class="path-card-number">02 / Landlord</span>
-        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80" alt="Landlord advice — placeholder">
+        <img src="assets/hero-landlord-regent.jpg" alt="Regent Street, Nottingham: established professional office district in period red-brick buildings" class="hero-img-landlord">
       </div>
       <div class="path-card-tag">For landlords & property owners</div>
       <h3 class="path-card-title">Protecting value, managing risk,<br>improving returns.</h3>
@@ -1837,7 +1867,13 @@
         <div class="section-eyebrow">Insights & Thought Leadership</div>
         <h2 class="insights-title">Written thinking on the <em>commercial property market.</em></h2>
       </div>
-      <p class="insights-intro">A regular column on lease strategy, market conditions, and the decisions facing landlords and tenants today. Drawing on industry updates from RICS and direct experience advising clients nationwide.</p>
+      <div class="insights-header-right">
+        <p class="insights-intro">A regular column on lease strategy, market conditions, and the decisions facing landlords and tenants today. Drawing on industry updates from RICS and direct experience advising clients nationwide.</p>
+        <a href="insights.html" class="insights-link">
+          View all
+          <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1L19 6L14 11M19 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
     </div>
     <div class="insights-grid">
       <a href="insight-how-rent-reviews-work.html" class="insight">
