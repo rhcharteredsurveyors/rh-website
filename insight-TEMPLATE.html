@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================================
+     INSIGHTS ARTICLE TEMPLATE
+     ============================================================================
+     
+     HOW TO USE THIS TEMPLATE:
+     
+     1. Save a copy with the article's slug as the filename, e.g. 
+        `insight-when-to-challenge-business-rates.html`
+        Naming convention: insight-{kebab-case-slug}.html
+     
+     2. Update the SEO block (title, meta description, OG tags, canonical URL).
+        Title: ≤60 chars including "| RH Chartered Surveyors"
+        Description: ≤160 chars
+     
+     3. Update the Schema.org JSON-LD: headline, description, datePublished, 
+        dateModified, articleSection, keywords.
+     
+     4. Update the article header: category eyebrow, headline (with italic 
+        emphasis on key phrase), subhead, date, reading time.
+     
+     5. Replace the article body. Available patterns:
+        - <p> paragraphs (default)
+        - <h2> subheadings (Playfair, navy, italic terracotta for emphasis)
+        - <blockquote class="pull-quote"> for highlighted lines
+        - <ul class="insight-list"> for bulleted lists with terracotta dots
+        - <ol class="insight-list-ordered"> for numbered lists
+     
+     6. Update the "Back to Insights" link and the related articles cards 
+        at the bottom (or remove the related section if no related articles 
+        exist yet).
+     
+     7. Don't forget to:
+        - Add this article to insights.html (replace a placeholder card)
+        - Add this article to sitemap.xml
+        - Update one of the three insights teasers on index.html
+        - Push to GitHub
+     
+     PLACEHOLDERS in this file are wrapped in [SQUARE BRACKETS] — search for [
+     and you'll find every spot to update.
+     ============================================================================ -->
+
+  <title>[ARTICLE TITLE] | RH Chartered Surveyors</title>
+  <meta name="description" content="[ARTICLE META DESCRIPTION - 150-160 chars - lead with the practical takeaway not the theory]">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+
+  <!-- ===== Open Graph / Twitter ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="RH Chartered Surveyors">
+  <meta property="og:title" content="[ARTICLE TITLE] | RH Chartered Surveyors">
+  <meta property="og:description" content="[ARTICLE META DESCRIPTION]">
+  <meta property="og:url" content="https://rhcharteredsurveyors.co.uk/insight-[SLUG].html">
+  <meta property="og:image" content="https://rhcharteredsurveyors.co.uk/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="article:author" content="Rob Haigh">
+  <meta property="article:published_time" content="[YYYY-MM-DD]">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[ARTICLE TITLE] | RH Chartered Surveyors">
+  <meta name="twitter:description" content="[ARTICLE META DESCRIPTION]">
+  <meta name="twitter:image" content="https://rhcharteredsurveyors.co.uk/assets/og-image.png">
+
+  <link rel="canonical" href="https://rhcharteredsurveyors.co.uk/insight-[SLUG].html">
+
+  <!-- ===== Article-specific styles ===== -->
+  <style>
+    /* Article header - reuses the established hero pattern but adapted for editorial use */
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--grey-500);
+      margin-top: 32px;
+    }
+
+    .article-meta-divider {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--grey-300);
+    }
+
+    /* Article body sections - narrow left column for navigation/meta, wide right column for content */
+    .article-section {
+      padding: 80px 48px;
+      background: var(--paper);
+    }
+    .article-section:nth-of-type(even) {
+      background: var(--cream);
+    }
+
+    .article-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .article-row {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 96px;
+      align-items: start;
+    }
+
+    .article-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      padding-top: 16px;
+      position: relative;
+    }
+    .article-label::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 40px;
+      height: 1px;
+      background: var(--terracotta);
+    }
+    .article-label-sub {
+      margin-top: 12px;
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--navy);
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+    }
+
+    /* Article body typography */
+    .article-content {
+      max-width: 720px;
+    }
+
+    .article-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 38px);
+      line-height: 1.2;
+      color: var(--navy);
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      margin: 48px 0 20px 0;
+    }
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+    .article-content h2 em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    .article-content p {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--grey-700);
+      margin-bottom: 24px;
+    }
+    .article-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .article-content strong {
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .article-content a {
+      color: var(--terracotta);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+    .article-content a:hover {
+      color: var(--navy);
+    }
+
+    /* Pull quote - the signature italic terracotta brand moment, used for emphasis */
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px 0 32px 32px;
+      border-left: 2px solid var(--terracotta);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(22px, 2.4vw, 28px);
+      line-height: 1.4;
+      color: var(--navy);
+      font-weight: 400;
+      letter-spacing: -0.3px;
+    }
+    .pull-quote em {
+      color: var(--terracotta);
+    }
+
+    /* Lists with terracotta dots */
+    .insight-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+    }
+    .insight-list li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--grey-700);
+      margin-bottom: 12px;
+    }
+    .insight-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--terracotta);
+    }
+
+    /* Numbered list with terracotta numbers */
+    .insight-list-ordered {
+      counter-reset: insight-step;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+    }
+    .insight-list-ordered li {
+      counter-increment: insight-step;
+      position: relative;
+      padding-left: 56px;
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--grey-700);
+      margin-bottom: 24px;
+    }
+    .insight-list-ordered li::before {
+      content: counter(insight-step, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 6px;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--terracotta);
+      font-weight: 500;
+    }
+
+    /* Article footer with author byline and back link */
+    .article-footer {
+      padding: 64px 48px 96px;
+      background: var(--paper);
+      border-top: 1px solid var(--grey-300);
+    }
+    .article-footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .article-byline {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--grey-300);
+    }
+    .article-byline-text {
+      flex: 1;
+    }
+    .article-byline-name {
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--navy);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .article-byline-name em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+    .article-byline-credentials {
+      font-size: 13px;
+      color: var(--grey-500);
+      letter-spacing: 0.5px;
+    }
+
+    .back-to-insights {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 28px;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      align-self: flex-start;
+    }
+    .back-to-insights:hover {
+      background: var(--navy);
+      color: var(--cream);
+    }
+
+    /* Related insights cards (optional - remove if no related articles yet) */
+    .related-insights {
+      padding: 80px 48px;
+      background: var(--cream);
+      border-top: 1px solid var(--grey-300);
+    }
+    .related-insights-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .related-insights-header {
+      margin-bottom: 48px;
+    }
+    .related-insights-eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 12px;
+    }
+    .related-insights-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 36px);
+      color: var(--navy);
+      font-weight: 500;
+      letter-spacing: -0.4px;
+    }
+    .related-insights-title em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .related-card {
+      padding: 32px;
+      background: var(--paper);
+      border: 1px solid var(--grey-300);
+      text-decoration: none;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .related-card:hover {
+      border-color: var(--terracotta);
+      transform: translateY(-2px);
+    }
+    .related-card-eyebrow {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+    }
+    .related-card-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--navy);
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      line-height: 1.3;
+    }
+    .related-card-excerpt {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--grey-700);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .article-section {
+        padding: 56px 24px;
+      }
+      .article-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .article-content h2 {
+        margin: 32px 0 16px 0;
+      }
+      .article-footer {
+        padding: 48px 24px 64px;
+      }
+      .related-insights {
+        padding: 56px 24px;
+      }
+      .related-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .pull-quote {
+        padding: 24px 0 24px 20px;
+      }
+    }
+  </style>
+
+  <!-- ===== Schema.org structured data ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "[ARTICLE TITLE - plain text, no HTML]",
+    "description": "[ARTICLE META DESCRIPTION]",
+    "url": "https://rhcharteredsurveyors.co.uk/insight-[SLUG].html",
+    "image": "https://rhcharteredsurveyors.co.uk/assets/og-image.png",
+    "datePublished": "[YYYY-MM-DD]",
+    "dateModified": "[YYYY-MM-DD]",
+    "articleSection": "[CATEGORY e.g. Landlord Strategy | Tenant Advice | Market Commentary]",
+    "keywords": "[COMMA-SEPARATED KEYWORDS]",
+    "author": {
+      "@type": "Person",
+      "name": "Rob Haigh",
+      "honorificSuffix": "MRICS",
+      "url": "https://rhcharteredsurveyors.co.uk/about.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RH Chartered Surveyors",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://rhcharteredsurveyors.co.uk/assets/logo-nav.svg"
+      }
+    }
+  }
+  </script>
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-pBVcYl2fnkK8t8OtW9HYf.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo" aria-label="RH Chartered Surveyors — Home">
+    <img src="assets/logo-nav.svg" alt="RH Chartered Surveyors. Commercial Property Advice. Delivered Personally.">
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="index.html#paths">Services</a>
+    <a href="properties.html">Properties</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="nav-cta">Get in Touch</a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+  </button>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a href="about.html" class="mobile-menu-link">About Rob</a>
+    <a href="index.html#paths" class="mobile-menu-link">Services</a>
+    <a href="properties.html" class="mobile-menu-link">Properties</a>
+    <a href="insights.html" class="mobile-menu-link">Insights</a>
+    <a href="contact.html" class="mobile-menu-link mobile-menu-link-cta">Get in Touch</a>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+      const isOpen = document.body.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        menu.setAttribute('aria-hidden', 'true');
+      });
+    });
+  })();
+</script>
+
+<!-- ============================================================================
+     ARTICLE HERO
+     ============================================================================
+     Replace:
+     - Breadcrumb final span (article title in plain text)
+     - Eyebrow: category (e.g. LANDLORD STRATEGY, TENANT ADVICE, MARKET COMMENTARY)
+     - Headline: 2-line headline with one or two italic terracotta emphasis words
+     - Subhead: one sentence framing the practical takeaway
+     - Meta: date and reading time
+     ============================================================================ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="insights.html">Insights</a>
+      <span class="breadcrumb-sep"></span>
+      <span>[ARTICLE TITLE - SHORT VERSION]</span>
+    </div>
+
+    <div class="hero-eyebrow">[CATEGORY - e.g. LANDLORD STRATEGY]</div>
+    <h1 class="hero-headline">[FIRST PART OF HEADLINE] <em>[ITALIC PHRASE].</em></h1>
+    <p class="hero-sub">
+      <em>[Italic emphasis opening clause],</em> [rest of subhead framing the practical point].
+    </p>
+
+    <div class="article-meta">
+      <span>[DAY MONTH YEAR - e.g. 26 May 2026]</span>
+      <span class="article-meta-divider"></span>
+      <span>[X] min read</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================================
+     ARTICLE BODY
+     ============================================================================
+     The article body is broken into "sections" — narrow left column with a
+     section label, wide right column with content.
+     
+     RECOMMENDED STRUCTURE:
+     - Section 1: Opening / The situation
+     - Section 2: The detail / What's actually going on
+     - Section 3: The recommendation / What to do
+     - Section 4 (optional): Caveats / When this doesn't apply
+     
+     But it's flexible. Use as many sections as the subject warrants. Each one
+     gets its own .article-section block.
+     ============================================================================ -->
+
+<!-- ===== Section 1 ===== -->
+<section class="article-section">
+  <div class="article-inner">
+    <div class="article-row">
+      <div>
+        <div class="article-label">Section 01
+          <div class="article-label-sub">[SECTION TITLE - e.g. The situation]</div>
+        </div>
+      </div>
+      <div class="article-content">
+
+        <p>
+          [Opening paragraph - state the point clearly and immediately. Lead with the practical, not the theoretical. If a landlord is wondering whether to challenge a rates assessment, open with "Most rates challenges don't pay off" rather than "Business rates are a complex regulatory area...".]
+        </p>
+
+        <p>
+          [Second paragraph - back up the opening claim with the why or the context. Specific, not abstract. Real numbers if you have them.]
+        </p>
+
+        <p>
+          [Third paragraph if needed - the reader should now understand both the point and why it matters before moving on.]
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 2 ===== -->
+<section class="article-section">
+  <div class="article-inner">
+    <div class="article-row">
+      <div>
+        <div class="article-label">Section 02
+          <div class="article-label-sub">[SECTION TITLE - e.g. What's actually going on]</div>
+        </div>
+      </div>
+      <div class="article-content">
+
+        <h2>[Optional subheading <em>with terracotta emphasis</em>.]</h2>
+
+        <p>
+          [Body paragraph.]
+        </p>
+
+        <p>
+          [Body paragraph. Use <strong>bold</strong> for the key terms you want a scanning reader to catch.]
+        </p>
+
+        <!-- PULL QUOTE EXAMPLE (optional - delete the whole blockquote if not using):
+             Use sparingly. One per article maximum. Reserve for the line that 
+             captures the article's central insight. -->
+        <blockquote class="pull-quote">
+          [The single line that captures the article's central insight. Italic Playfair, with one or two words in <em>terracotta italic</em> for emphasis.]
+        </blockquote>
+
+        <p>
+          [Continue body after the pull quote.]
+        </p>
+
+        <!-- BULLET LIST EXAMPLE (optional): -->
+        <ul class="insight-list">
+          <li>[Bullet point - use for genuine lists, not just to break up prose]</li>
+          <li>[Bullet point - keep each one short and parallel in structure]</li>
+          <li>[Bullet point - 3-5 bullets max typically]</li>
+        </ul>
+
+        <p>
+          [Body paragraph after the list.]
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 3 ===== -->
+<section class="article-section">
+  <div class="article-inner">
+    <div class="article-row">
+      <div>
+        <div class="article-label">Section 03
+          <div class="article-label-sub">[SECTION TITLE - e.g. The recommendation]</div>
+        </div>
+      </div>
+      <div class="article-content">
+
+        <h2>So <em>what should you do</em>?</h2>
+
+        <p>
+          [The practical recommendation. This is where you tell the reader what to actually do. Specific, actionable. Don't hedge.]
+        </p>
+
+        <!-- NUMBERED LIST EXAMPLE (optional): -->
+        <ol class="insight-list-ordered">
+          <li>[Numbered step - use for sequential processes or ranked priorities]</li>
+          <li>[Numbered step]</li>
+          <li>[Numbered step - keep parallel structure across all numbered items]</li>
+        </ol>
+
+        <p>
+          [Closing paragraph - what the takeaway is. Often a single confident sentence works best.]
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 4 (optional - caveats / when this doesn't apply) ===== -->
+<section class="article-section">
+  <div class="article-inner">
+    <div class="article-row">
+      <div>
+        <div class="article-label">Section 04
+          <div class="article-label-sub">When this doesn't apply</div>
+        </div>
+      </div>
+      <div class="article-content">
+
+        <p>
+          [The honest caveats. The "yes but" cases where the advice above doesn't hold. Showing the edges of your own advice is what builds credibility. If you can't think of any caveats, that's a sign the article might be too one-sided.]
+        </p>
+
+        <p>
+          [Closing paragraph. Could be a hand-off to "if you want to talk through your specific situation, get in touch" - but don't make every article end on a CTA, it gets repetitive.]
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================================
+     ARTICLE FOOTER - Author byline + Back to Insights
+     ============================================================================ -->
+<section class="article-footer">
+  <div class="article-footer-inner">
+
+    <div class="article-byline">
+      <div class="article-byline-text">
+        <div class="article-byline-name">Written by <em>Rob Haigh MRICS</em></div>
+        <div class="article-byline-credentials">Founder, RH Chartered Surveyors. Practising commercial property since 2012.</div>
+      </div>
+    </div>
+
+    <a href="insights.html" class="back-to-insights">
+      ← Back to all Insights
+    </a>
+
+  </div>
+</section>
+
+<!-- ============================================================================
+     RELATED INSIGHTS (OPTIONAL)
+     ============================================================================
+     Once you have 3+ articles, uncomment and populate this section with 2 
+     related articles. For the first article (when there are no related ones), 
+     delete this entire section.
+     ============================================================================ -->
+<!--
+<section class="related-insights">
+  <div class="related-insights-inner">
+    <div class="related-insights-header">
+      <div class="related-insights-eyebrow">Continue reading</div>
+      <div class="related-insights-title">Other <em>Insights.</em></div>
+    </div>
+    <div class="related-grid">
+
+      <a href="insight-[SLUG].html" class="related-card">
+        <div class="related-card-eyebrow">[CATEGORY]</div>
+        <div class="related-card-title">[Title of related article with <em>italic emphasis</em>.]</div>
+        <div class="related-card-excerpt">[One-line summary of the article, max 20 words.]</div>
+      </a>
+
+      <a href="insight-[SLUG].html" class="related-card">
+        <div class="related-card-eyebrow">[CATEGORY]</div>
+        <div class="related-card-title">[Title of second related article with <em>italic emphasis</em>.]</div>
+        <div class="related-card-excerpt">[One-line summary, max 20 words.]</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ============================================================================
+     FOOTER
+     ============================================================================ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col-brand">
+        <div class="footer-logo">
+          <img src="assets/logo-footer.svg" alt="RH Chartered Surveyors">
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <span class="footer-cred">RICS Regulated</span>
+          <span class="footer-cred">MRICS Chartered</span>
+          <span class="footer-cred">Est. 2019</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="valuations.html">Valuations</a></li>
+          <li><a href="disputes.html">Disputes</a></li>
+          <li><a href="property-management.html">Property Management</a></li>
+          <li><a href="business-rates.html">Business Rates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-legal">
+      <p>&copy; 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</p>
+      <p>RICS Membership No. 5020924</p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
