@@ -152,6 +152,40 @@
     letter-spacing: -0.3px;
     line-height: 1.2;
   }
+  /* Splits breakdown (whole / split options in one card) */
+  .property-splits {
+    padding-top: 32px;
+    border-top: 1px solid var(--grey-300);
+  }
+  .property-split {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--grey-300);
+  }
+  .property-split:last-child { border-bottom: none; }
+  .property-split-name {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+  }
+  .property-split-figs {
+    font-family: var(--serif);
+    font-size: 19px;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    text-align: right;
+  }
+  .property-terms {
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--navy-soft);
+    letter-spacing: 0.3px;
+  }
 
   /* Detail sections below the hero */
   .property-details {
@@ -450,142 +484,59 @@
   </div>
 </section>
 
-<!-- INTRODUCTORY BLOCK: the property (shared context) -->
-<section class="property">
-  <div class="property-inner">
-
-    <div class="property-meta">Office · To Let · Joint Agency · Pride Park</div>
-    <h2 class="property-title">Stadium <em>Business Court.</em></h2>
-    <p class="property-address">Pride Park · Derby · DE24 8HP</p>
-
-    <div class="property-details" style="margin-bottom: 24px;">
-      <div class="property-details-label">The opportunity</div>
-      <div class="property-details-content">
-        <p>
-          Recently refurbished, two-storey self-contained office accommodation at the property on Derby's premier business park. <strong>Available as two separate lettings</strong> (Units 4 &amp; 5, or Unit 6), or as the whole building combined.
-        </p>
-        <p>
-          Each unit provides reception, open plan office accommodation, meeting rooms, kitchen and W/C facilities, with air conditioning, suspended ceilings, LED lighting, and on-site parking.
-        </p>
-        <p style="margin-top: 32px; font-size: 14px; color: var(--navy-soft); font-style: italic;">
-          Marketed jointly with Fisher Hargreaves Proctor (the joint agent) of Derby.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROPERTY 1: Units 4 &amp; 5 -->
+<!-- LISTING: Stadium Business Court, Pride Park (Units 4-6, whole or split) -->
 <section class="property" style="padding-top: 40px;">
   <div class="property-inner">
 
-    <div class="property-meta">Option One · Units 4 &amp; 5</div>
-    <h2 class="property-title">Units 4 &amp; 5, <em>the property.</em></h2>
-    <p class="property-address">2,886 sq ft · Two-storey office</p>
+    <div class="property-meta">Office &middot; To Let &middot; Joint Agency &middot; Pride Park</div>
+    <h2 class="property-title">Stadium <em>Business Court.</em></h2>
+    <p class="property-address">Pride Park &middot; Derby &middot; DE24 8HP</p>
 
     <div class="property-hero">
       <div class="property-image">
-        <img src="assets/pride-park-units-4-5.jpg" alt="Units 4 &amp; 5, Pride Park, Derby, two-storey office" onerror="this.parentElement.innerHTML='<div class=&quot;property-image-placeholder&quot;><span>Photograph to follow</span></div>'">
+        <img src="assets/pride-park-stadium-business-court.jpg" alt="Stadium Business Court, Pride Park, Derby, two-storey offices, Units 4 to 6" onerror="this.parentElement.innerHTML='<div class=&quot;property-image-placeholder&quot;><span>Photograph to follow</span></div>'">
       </div>
 
       <div class="property-headline-details">
-        <div class="property-availability">Available Now</div>
+        <div class="property-availability">To Let &middot; Whole or Split</div>
         <p class="property-summary">
-          Larger of the two splits. Open plan office space across ground and first floors with meeting and breakout rooms. <em>Suited to growing teams.</em>
+          Recently refurbished two-storey offices, Units 4 to 6. <em>Available as the whole building or split into two lettings.</em>
         </p>
-        <div class="property-stats">
-          <div>
-            <div class="property-stat-label">Size</div>
-            <div class="property-stat-value">2,886 sq ft<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">(268 m²)</span></div>
+        <div class="property-splits">
+          <div class="property-split">
+            <div class="property-split-name">Whole building</div>
+            <div class="property-split-figs">4,172 sq ft &middot; <strong>&pound;62,500</strong> pa</div>
           </div>
-          <div>
-            <div class="property-stat-label">Rent</div>
-            <div class="property-stat-value">£42,000<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">per annum</span></div>
+          <div class="property-split">
+            <div class="property-split-name">Units 4 &amp; 5</div>
+            <div class="property-split-figs">2,886 sq ft &middot; <strong>&pound;42,000</strong> pa</div>
           </div>
-          <div>
-            <div class="property-stat-label">Tenure</div>
-            <div class="property-stat-value">New lease<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">terms available</span></div>
-          </div>
-          <div>
-            <div class="property-stat-label">EPC</div>
-            <div class="property-stat-value">B (50)<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">Energy rating</span></div>
+          <div class="property-split">
+            <div class="property-split-name">Unit 6</div>
+            <div class="property-split-figs">1,286 sq ft &middot; <strong>&pound;20,500</strong> pa</div>
           </div>
         </div>
-        <a href="mailto:rob@rhcharteredsurveyors.co.uk?subject=Enquiry: Units 4 &amp; 5, Pride Park" class="property-enquire">
-          Enquire about Units 4 &amp; 5
-          <span class="property-enquire-arrow">→</span>
+        <p class="property-terms">New lease terms available &middot; EPC B</p>
+        <a href="contact.html" class="property-enquire">
+          Enquire
+          <span class="property-enquire-arrow">&rarr;</span>
         </a>
       </div>
     </div>
-
-  </div>
-</section>
-
-<!-- PROPERTY 2: Unit 6 -->
-<section class="property" style="padding-top: 40px; padding-bottom: 60px;">
-  <div class="property-inner">
-
-    <div class="property-meta">Option Two · Unit 6</div>
-    <h2 class="property-title">Unit 6, <em>the property.</em></h2>
-    <p class="property-address">1,286 sq ft · Two-storey office</p>
-
-    <div class="property-hero">
-      <div class="property-image">
-        <img src="assets/pride-park-unit-6.jpg" alt="Unit 6, Pride Park, Derby, two-storey office" onerror="this.parentElement.innerHTML='<div class=&quot;property-image-placeholder&quot;><span>Photograph to follow</span></div>'">
-      </div>
-
-      <div class="property-headline-details">
-        <div class="property-availability">Available Now</div>
-        <p class="property-summary">
-          The smaller split. Compact two-storey office with all the same specifications. <em>Suited to small teams or single-floor occupiers.</em>
-        </p>
-        <div class="property-stats">
-          <div>
-            <div class="property-stat-label">Size</div>
-            <div class="property-stat-value">1,286 sq ft<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">(119 m²)</span></div>
-          </div>
-          <div>
-            <div class="property-stat-label">Rent</div>
-            <div class="property-stat-value">£20,500<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">per annum</span></div>
-          </div>
-          <div>
-            <div class="property-stat-label">Tenure</div>
-            <div class="property-stat-value">New lease<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">terms available</span></div>
-          </div>
-          <div>
-            <div class="property-stat-label">EPC</div>
-            <div class="property-stat-value">B (35)<br><span style="font-size: 14px; color: var(--navy-soft); font-weight: 400;">Energy rating</span></div>
-          </div>
-        </div>
-        <a href="mailto:rob@rhcharteredsurveyors.co.uk?subject=Enquiry: Unit 6, Pride Park" class="property-enquire">
-          Enquire about Unit 6
-          <span class="property-enquire-arrow">→</span>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- COMBINED OPTION + LOCATION -->
-<section class="property" style="padding-top: 20px; padding-bottom: 60px;">
-  <div class="property-inner">
 
     <div class="property-details">
-      <div class="property-details-label">Or take the whole</div>
+      <div class="property-details-label">Specification</div>
       <div class="property-details-content">
         <p>
-          The full building is also available as a single letting. <strong>4,172 sq ft total</strong> at <strong>£62,580 per annum</strong>, providing a self-contained office across both Units 4–5 and Unit 6.
+          Each unit provides reception, open plan office accommodation, meeting rooms, kitchen and W/C facilities, with air conditioning, suspended ceilings, LED lighting, and on-site parking.
         </p>
-        <a href="mailto:rob@rhcharteredsurveyors.co.uk?subject=Enquiry: Whole Building, Pride Park" class="property-enquire">
-          Enquire about the whole building
-          <span class="property-enquire-arrow">→</span>
-        </a>
+        <p style="margin-top: 28px; font-size: 14px; color: var(--navy-soft); font-style: italic;">
+          Marketed jointly with Fisher Hargreaves Proctor of Derby.
+        </p>
       </div>
     </div>
 
-    <div class="property-details" style="margin-top: 56px;">
+    <div class="property-details">
       <div class="property-details-label">Location</div>
       <div class="property-details-content">
         <p>
