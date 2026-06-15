@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Commercial Tenant's Handbook | Free Commercial Lease Guide | RH Chartered Surveyors</title>
+  <meta name="description" content="A free commercial lease guide and checklist pack for business owners in England and Wales, written by chartered surveyor Rob Haigh MRICS. No sign-up, direct download.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== COMMERCIAL TENANT'S HANDBOOK PAGE ===== */
+
+  /* Hero actions */
+  .hero-actions {
+    margin-top: 36px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* Shared button styles (page-local) */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 32px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--navy);
+    border: 1px solid var(--navy);
+  }
+  .btn-outline:hover {
+    background: var(--navy);
+    color: var(--cream);
+  }
+
+  /* What it is / what's inside */
+  .guide {
+    padding: 100px 48px;
+    background: var(--cream);
+    border-top: 1px solid var(--grey-300);
+  }
+  .guide-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .guide-header {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+  .guide-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .guide-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .guide-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .guide-body {
+    max-width: 720px;
+  }
+  .guide-body p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--grey-700);
+    margin: 0 0 20px;
+  }
+  .guide-body p.lead {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2vw, 26px);
+    line-height: 1.5;
+    color: var(--navy-soft);
+    letter-spacing: -0.3px;
+    font-style: italic;
+    margin-bottom: 32px;
+  }
+
+  /* Parts list */
+  .parts {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 0;
+  }
+  .part {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+    border-top: 1px solid var(--grey-300);
+    align-items: baseline;
+  }
+  .part:last-child {
+    border-bottom: 1px solid var(--grey-300);
+  }
+  .part-num {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .part-title {
+    font-family: var(--serif);
+    font-size: 21px;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    margin: 0 0 8px;
+  }
+  .part-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--grey-700);
+    margin: 0;
+  }
+  .guide-foot {
+    margin-top: 32px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--grey-700);
+  }
+
+  /* Downloads */
+  .downloads {
+    padding: 100px 48px;
+    background: var(--paper);
+    border-top: 1px solid var(--grey-300);
+  }
+  .downloads-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .downloads-header {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 96px;
+    align-items: start;
+    margin-bottom: 48px;
+  }
+  .downloads-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    padding-top: 16px;
+    position: relative;
+  }
+  .downloads-label::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .downloads-label-sub {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .downloads-intro {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.55;
+    color: var(--navy-soft);
+    letter-spacing: -0.2px;
+    max-width: 720px;
+  }
+  .downloads-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .download-card {
+    background: var(--cream);
+    border: 1px solid var(--grey-300);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .download-card-label {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 16px;
+  }
+  .download-card-title {
+    font-family: var(--serif);
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    margin: 0 0 14px;
+  }
+  .download-card-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--grey-700);
+    margin: 0 0 32px;
+    flex-grow: 1;
+  }
+  .download-card .btn {
+    align-self: flex-start;
+  }
+  .downloads-note {
+    margin-top: 36px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--grey-500);
+  }
+
+  @media (max-width: 1024px) {
+    .guide-header,
+    .downloads-header {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .guide-label::before,
+    .downloads-label::before { display: none; }
+  }
+  @media (max-width: 768px) {
+    .downloads-grid { grid-template-columns: 1fr; }
+    .part { grid-template-columns: 36px 1fr; gap: 16px; }
+  }
+</style>
+
+  <!-- ===== Favicon + Open Graph ===== -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RH Chartered Surveyors">
+  <meta property="og:title" content="The Commercial Tenant's Handbook | Free Commercial Lease Guide">
+  <meta property="og:description" content="A free commercial lease guide and checklist pack for business owners in England and Wales. Written by chartered surveyor Rob Haigh MRICS. No sign-up.">
+  <meta property="og:url" content="https://rhcharteredsurveyors.co.uk/commercial-tenants-handbook.html">
+  <meta property="og:image" content="https://rhcharteredsurveyors.co.uk/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Commercial Tenant's Handbook | Free Commercial Lease Guide">
+  <meta name="twitter:description" content="A free commercial lease guide and checklist pack for business owners in England and Wales. Written by chartered surveyor Rob Haigh MRICS. No sign-up.">
+  <meta name="twitter:image" content="https://rhcharteredsurveyors.co.uk/assets/og-image.png">
+
+  <link rel="canonical" href="https://rhcharteredsurveyors.co.uk/commercial-tenants-handbook.html">
+
+  <!-- ===== Schema.org structured data ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RH Chartered Surveyors",
+    "alternateName": "RHCS",
+    "url": "https://rhcharteredsurveyors.co.uk/",
+    "logo": "https://rhcharteredsurveyors.co.uk/assets/logo-nav.svg",
+    "image": "https://rhcharteredsurveyors.co.uk/assets/og-image.png",
+    "description": "Founder-led commercial chartered surveying practice. Senior expertise from a single MRICS adviser for landlords and tenants across the UK.",
+    "founder": {
+      "@type": "Person",
+      "name": "Rob Haigh",
+      "honorificSuffix": "MRICS"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12A Southwell Business Centre, Crew Lane",
+      "addressLocality": "Southwell",
+      "addressRegion": "Nottinghamshire",
+      "postalCode": "NG25 0TX",
+      "addressCountry": "GB"
+    },
+    "telephone": "+44 7980 056973",
+    "email": "rob@rhcharteredsurveyors.co.uk",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Royal Institution of Chartered Surveyors",
+      "url": "https://www.rics.org/"
+    },
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "RICS Membership Number",
+      "value": "5020924"
+    },
+    "sameAs": [
+      "https://share.google/sRdffhiOu1soCqr34"
+    ]
+  }
+  </script>
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-pBVcYl2fnkK8t8OtW9HYf.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo" aria-label="RH Chartered Surveyors - Home">
+    <img src="assets/logo-nav.svg" alt="RH Chartered Surveyors. Commercial Property Advice. Delivered Personally.">
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About Rob</a>
+    <a href="index.html#paths">Services</a>
+    <a href="properties.html">Properties</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="nav-cta">Get in Touch</a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+  </button>
+</nav>
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a href="about.html" class="mobile-menu-link">About Rob</a>
+    <a href="index.html#paths" class="mobile-menu-link">Services</a>
+    <a href="properties.html" class="mobile-menu-link">Properties</a>
+    <a href="insights.html" class="mobile-menu-link">Insights</a>
+    <a href="contact.html" class="mobile-menu-link mobile-menu-link-cta">Get in Touch</a>
+  </div>
+</div>
+
+<!-- Mobile menu toggle script -->
+<script>
+  (function() {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+      const isOpen = document.body.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        menu.setAttribute('aria-hidden', 'true');
+      });
+    });
+  })();
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <span>The Commercial Tenant's Handbook</span>
+    </div>
+    <div class="hero-eyebrow">A free guide for tenants</div>
+    <h1 class="hero-headline">Know what you're signing, <em>before you sign it.</em></h1>
+    <p class="hero-sub">
+      A commercial lease guide and checklist pack for business owners, written from the leases I work on every day.<br>
+      <em>Free to download, no sign-up.</em>
+    </p>
+    <div class="hero-actions">
+      <a href="assets/guides/commercial-tenants-handbook.pdf" class="btn btn-outline" download onclick="plausible('Handbook Download')">Download the handbook</a>
+      <a href="#downloads" class="btn btn-outline">What's inside</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT IS / WHAT'S INSIDE -->
+<section class="guide">
+  <div class="guide-inner">
+    <div class="guide-header">
+      <div class="guide-label">
+        What it is
+        <div class="guide-label-sub">The handbook.</div>
+      </div>
+      <div class="guide-body">
+        <p class="lead">Most of the cost and risk in a commercial lease is settled before anyone puts pen to paper. The earlier you understand it, the more room you have to do something about it.</p>
+        <p>Your premises are probably your second biggest cost after people, and a lease commits you to that cost for years, usually before you have had a real chance to understand what you are signing. This handbook sets out the parts of a lease that cost businesses money and cause them grief: what to look for, what to ask, and where the real risks sit.</p>
+        <p>It does not replace advice, and it is not meant to. It is the thing you read first, so that when you do pick up the phone, you are asking better questions and paying for advice on the things that matter rather than the basics. It covers commercial property in England and Wales. The law is different in Scotland and Northern Ireland.</p>
+
+        <ol class="parts">
+          <li class="part">
+            <div class="part-num">01</div>
+            <div>
+              <h3 class="part-title">Before you sign</h3>
+              <p class="part-desc">Heads of terms, the questions to ask before you agree anything, and the red flags that mean stop and take advice.</p>
+            </div>
+          </li>
+          <li class="part">
+            <div class="part-num">02</div>
+            <div>
+              <h3 class="part-title">The cost of occupation</h3>
+              <p class="part-desc">Rent, service charge, insurance and rates, and the gap between a headline figure and what occupying the building really costs.</p>
+            </div>
+          </li>
+          <li class="part">
+            <div class="part-num">03</div>
+            <div>
+              <h3 class="part-title">Lease events</h3>
+              <p class="part-desc">Rent reviews, renewals and security of tenure, break clauses, assignment and subletting, and what you are allowed to do with the space.</p>
+            </div>
+          </li>
+          <li class="part">
+            <div class="part-num">04</div>
+            <div>
+              <h3 class="part-title">The building and its condition</h3>
+              <p class="part-desc">Repairs and dilapidations, the schedule of condition, fit-out and reinstatement, and the energy rules that decide whether a building can be let at all.</p>
+            </div>
+          </li>
+          <li class="part">
+            <div class="part-num">05</div>
+            <div>
+              <h3 class="part-title">Taking advice</h3>
+              <p class="part-desc">Deposits, guarantees and what you sign up to personally, and who does what when a lease is on the table.</p>
+            </div>
+          </li>
+        </ol>
+
+        <p class="guide-foot">It comes with request templates, a plain-English glossary, and a separate checklist pack: twelve working checklists to print and fill in, from a heads of terms review sheet to a red flags list to run through before you sign.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOADS -->
+<section class="downloads" id="downloads">
+  <div class="downloads-inner">
+    <div class="downloads-header">
+      <div class="downloads-label">
+        Download
+        <div class="downloads-label-sub">Free, no sign-up.</div>
+      </div>
+      <p class="downloads-intro">
+        Both documents are free to download and yours to keep. No form, no email address, no follow-up unless you ask for one.
+      </p>
+    </div>
+
+    <div class="downloads-grid">
+      <div class="download-card">
+        <div class="download-card-label">The handbook</div>
+        <h2 class="download-card-title">The Commercial Tenant's Handbook</h2>
+        <p class="download-card-desc">Five parts and twenty short sections, with request templates and a plain-English glossary. The full guide to what a commercial lease really commits you to.</p>
+        <a href="assets/guides/commercial-tenants-handbook.pdf" class="btn btn-outline" download onclick="plausible('Handbook Download')">Download the handbook (PDF)</a>
+      </div>
+      <div class="download-card">
+        <div class="download-card-label">The companion</div>
+        <h2 class="download-card-title">The Checklist Pack</h2>
+        <p class="download-card-desc">Twelve working checklists to print, fill in and take to your adviser. Use them when you view, when heads of terms land, and before you sign anything.</p>
+        <a href="assets/guides/commercial-lease-checklist-pack.pdf" class="btn btn-outline" download onclick="plausible('Checklist Download')">Download the checklist pack (PDF)</a>
+      </div>
+    </div>
+
+    <p class="downloads-note">This handbook is general guidance, not advice. It is not a substitute for professional advice on your own situation, and it does not create a client relationship. The information relates to commercial property in England and Wales. Last reviewed June 2026.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Start the conversation</div>
+    <h2 class="cta-title">Want a <em>second pair of eyes?</em></h2>
+    <p class="cta-sub">
+      If something in the handbook has made you pause about your own lease or premises, that is the moment to get in touch. No charge for working out whether I can help, and no hard sell if I cannot. Call, email, or WhatsApp.
+    </p>
+    <div class="cta-methods">
+      <a href="tel:07980056973" class="cta-method">
+        <div class="cta-method-label">Call directly</div>
+        <div class="cta-method-value">07980 056973</div>
+      </a>
+      <a href="mailto:rob@rhcharteredsurveyors.co.uk" class="cta-method">
+        <div class="cta-method-label">Email</div>
+        <div class="cta-method-value">rob@rhcharteredsurveyors.co.uk</div>
+      </a>
+      <a href="https://wa.me/447980056973" class="cta-method">
+        <div class="cta-method-label">WhatsApp</div>
+        <div class="cta-method-value">Message Rob</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="assets/logo-footer.svg" alt="RH Chartered Surveyors">
+        </div>
+        <p class="footer-tagline">Independent commercial property advice for landlords, investors, and businesses nationwide. RICS Regulated Firm.</p>
+        <div class="footer-credentials">
+          <div class="footer-cred">RICS Regulated</div>
+          <div class="footer-cred">MRICS Chartered</div>
+          <div class="footer-cred">Est. 2019</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Landlords</div>
+        <ul>
+          <li><a href="strategic-asset-management.html">Strategic Asset Management</a></li>
+          <li><a href="acquisitions.html">Acquisitions</a></li>
+          <li><a href="sales-lettings.html">Sales &amp; Lettings</a></li>
+          <li><a href="lease-renewals.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="strategic-reviews.html">Strategic Reviews</a></li>
+          <li><a href="valuations.html">Valuations</a></li>
+          <li><a href="disputes.html">Disputes</a></li>
+          <li><a href="property-management.html">Property Management</a></li>
+          <li><a href="business-rates.html">Business Rates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Tenants</div>
+        <ul>
+          <li><a href="lease-renewals-tenant.html">Lease Renewals &amp; Rent Reviews</a></li>
+          <li><a href="lease-acquisitions-tenant.html">Lease Acquisitions &amp; Exits</a></li>
+          <li><a href="strategic-reviews-tenant.html">Strategic Reviews</a></li>
+          <li><a href="disputes-tenant.html">Disputes</a></li>
+          <li><a href="business-rates-tenant.html">Business Rates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Practice</div>
+        <ul>
+          <li><a href="about.html">About Rob</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="commercial-tenants-handbook.html">Tenant's Handbook</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 RH Chartered Surveyors. A trading entity of Haigh &amp; Haigh Properties Limited. Registered No. 12302429.</div>
+      <div>RICS Membership No. 5020924</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

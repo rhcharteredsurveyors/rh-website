@@ -1,5 +1,5 @@
 /* ============================================================================
-   RH CHARTERED SURVEYORS — SHARED STYLESHEET
+   RH CHARTERED SURVEYORS - SHARED STYLESHEET
    
    This file contains shared styles for the 4 inner pages (About, Landlord, 
    Tenant, Lease Renewals). The HOMEPAGE uses its own inline <style> block 
@@ -7,14 +7,14 @@
    would conflict with the shared rules here.
 
    STRUCTURE:
-   1. FOUNDATIONS — variables, resets, base body
+   1. FOUNDATIONS - variables, resets, base body
    2. NAVIGATION (inner page version)
    3. FOOTER (universal)
    4. CTA (inner pages)
    5. BREADCRUMB (inner pages)
    6. ABOUT page
    7. LANDLORD page (HERO, CONTEXT, SERVICES, REASSURE)
-   8. TENANT page (only CONTEXT is unique — rest shared with Landlord)
+   8. TENANT page (only CONTEXT is unique - rest shared with Landlord)
    9. LEASE-RENEWALS page
    10. RESPONSIVE (media queries)
    ============================================================================ */
@@ -240,7 +240,7 @@
 
 /* ============================================================================
    4. CTA (inner pages)
-   Homepage uses .contact instead — defined inline on homepage.
+   Homepage uses .contact instead - defined inline on homepage.
    ============================================================================ */
 .cta {
     padding: 160px 48px;
@@ -714,7 +714,7 @@
     color: var(--grey-700);
   }
 
-/* --- STAND FOR — five principles --- */
+/* --- STAND FOR - five principles --- */
 .principles {
     padding: 140px 48px;
     background: var(--navy);
@@ -2151,4 +2151,78 @@ body.menu-open .mobile-menu-link:nth-child(5) { transition-delay: 0.3s; }
   .hero {
     padding-top: 125px;
   }
+}
+
+
+/* ===== RESOURCE CALLOUT (free handbook) ===== */
+.resource-callout {
+  padding: 90px 48px;
+  background: var(--cream);
+  border-top: 1px solid var(--grey-300);
+}
+.resource-callout-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+.resource-callout-text { max-width: 700px; }
+.resource-callout-eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.resource-callout-eyebrow::before {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--terracotta);
+}
+.resource-callout-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 40px);
+  color: var(--navy);
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  font-weight: 500;
+  margin: 0 0 16px;
+}
+.resource-callout-title em { font-style: italic; color: var(--terracotta); }
+.resource-callout-sub {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--grey-700);
+  margin: 0;
+  max-width: 620px;
+}
+.resource-callout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 32px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  transition: all 0.3s ease;
+}
+.resource-callout-btn:hover {
+  background: var(--navy);
+  color: var(--cream);
+}
+@media (max-width: 900px) {
+  .resource-callout-inner { flex-direction: column; align-items: flex-start; gap: 28px; }
 }

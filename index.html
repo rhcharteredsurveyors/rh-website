@@ -344,7 +344,7 @@
     border-left: 1px solid var(--grey-300);
   }
 
-  /* V3 standfirst — full-width, centred composition */
+  /* V3 standfirst - full-width, centred composition */
   .standfirst-inner-v3 {
     max-width: 1000px;
     margin: 0 auto;
@@ -581,7 +581,7 @@
 
   .path-card:hover .path-card-link svg { transform: translateX(8px); }
 
-  /* ==================== SERVICES — NOW INFORMATIONAL ==================== */
+  /* ==================== SERVICES - NOW INFORMATIONAL ==================== */
   .services {
     padding: 140px 48px;
     background: var(--navy);
@@ -699,7 +699,7 @@
     border-color: var(--terracotta);
   }
 
-  /* V3 services footer — bigger statement */
+  /* V3 services footer - bigger statement */
   .services-footer-v3 {
     margin-top: 96px;
     padding-top: 64px;
@@ -1444,6 +1444,63 @@
     }
   }
 
+  /* ===== FREE HANDBOOK BAND ===== */
+  .handbook-band {
+    padding: 110px 48px;
+    background: var(--cream);
+    border-top: 1px solid var(--grey-300);
+  }
+  .handbook-band-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+    flex-wrap: wrap;
+  }
+  .handbook-band-text { max-width: 760px; }
+  .handbook-band-title {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4vw, 48px);
+    color: var(--navy);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    font-weight: 500;
+    margin: 0 0 18px;
+  }
+  .handbook-band-title em { font-style: italic; color: var(--terracotta); }
+  .handbook-band-sub {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--grey-700);
+    max-width: 640px;
+    margin: 0;
+  }
+  .handbook-band-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 32px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    background: transparent;
+    color: var(--navy);
+    border: 1px solid var(--navy);
+    transition: all 0.3s ease;
+  }
+  .handbook-band-btn:hover {
+    background: var(--navy);
+    color: var(--cream);
+  }
+  @media (max-width: 900px) {
+    .handbook-band { padding: 80px 48px; }
+    .handbook-band-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+  }
   </style>
   <!-- ===== Favicon + Open Graph (added by logo integration) ===== -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -1585,8 +1642,8 @@
 
 <!-- ==================== NAVIGATION ==================== -->
 <nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo" aria-label="RH Chartered Surveyors — Home">
-    <img src="assets/logo-nav.svg" alt="RH Chartered Surveyors — Commercial Property Advice. Delivered Personally.">
+  <a href="index.html" class="nav-logo" aria-label="RH Chartered Surveyors - Home">
+    <img src="assets/logo-nav.svg" alt="RH Chartered Surveyors - Commercial Property Advice. Delivered Personally.">
   </a>
   <div class="nav-links">
     <a href="about.html">About Rob</a>
@@ -1734,7 +1791,7 @@
   </div>
 </section>
 
-<!-- ==================== SERVICES — INFORMATIONAL, NOT CLICKABLE ==================== -->
+<!-- ==================== SERVICES - INFORMATIONAL, NOT CLICKABLE ==================== -->
 <section class="services" id="services">
   <div class="services-inner">
     <div class="services-header">
@@ -1898,6 +1955,18 @@
   </div>
 </section>
 
+<!-- ==================== FREE HANDBOOK ==================== -->
+<section class="handbook-band">
+  <div class="handbook-band-inner">
+    <div class="handbook-band-text">
+      <div class="section-eyebrow">Free resource</div>
+      <h2 class="handbook-band-title">The Commercial Tenant's <em>Handbook.</em></h2>
+      <p class="handbook-band-sub">A plain-English guide to what a commercial lease really commits you to, with a companion checklist pack. Free to download, no sign-up.</p>
+    </div>
+    <a href="commercial-tenants-handbook.html" class="handbook-band-btn">Read the handbook</a>
+  </div>
+</section>
+
 <!-- ==================== CONTACT ==================== -->
 <section class="contact" id="contact">
   <div class="contact-inner">
@@ -1970,6 +2039,7 @@
         <ul>
           <li><a href="about.html">About Rob</a></li>
           <li><a href="insights.html">Insights</a></li>
+          <li><a href="commercial-tenants-handbook.html">Tenant's Handbook</a></li>
           <li><a href="properties.html">Properties</a></li>
           <li><a href="compliance.html">Compliance</a></li>
           <li><a href="privacy.html">Privacy</a></li>
