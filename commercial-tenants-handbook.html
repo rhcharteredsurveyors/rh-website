@@ -259,6 +259,62 @@
     .downloads-grid { grid-template-columns: 1fr; }
     .part { grid-template-columns: 36px 1fr; gap: 16px; }
   }
+
+  /* ===== ENQUIRY FORM ===== */
+  .enquiry {
+    padding: 100px 48px;
+    background: var(--cream);
+    border-top: 1px solid var(--grey-300);
+  }
+  .enquiry-inner { max-width: 680px; margin: 0 auto; }
+  .enquiry-eyebrow {
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--terracotta); margin-bottom: 16px;
+  }
+  .enquiry-title {
+    font-family: var(--serif); font-size: clamp(30px, 4vw, 44px);
+    color: var(--navy); line-height: 1.1; letter-spacing: -0.8px;
+    font-weight: 500; margin: 0 0 18px;
+  }
+  .enquiry-title em { font-style: italic; color: var(--terracotta); }
+  .enquiry-sub { font-size: 17px; line-height: 1.65; color: var(--grey-700); margin: 0 0 40px; }
+  .enquiry-form { display: flex; flex-direction: column; gap: 26px; }
+  .field { display: flex; flex-direction: column; gap: 10px; }
+  .field label, .field-label { font-size: 13px; letter-spacing: 0.3px; color: var(--navy); font-weight: 500; }
+  .field .opt, .field .req { font-weight: 400; font-size: 12px; }
+  .field .opt { color: var(--grey-500); }
+  .field .req { color: var(--terracotta); }
+  .field input[type="text"], .field input[type="email"], .field textarea {
+    font-family: inherit; font-size: 16px; color: var(--navy); background: var(--paper);
+    border: 1px solid var(--grey-300); padding: 14px 16px; width: 100%;
+    transition: border-color 0.2s ease;
+  }
+  .field input:focus, .field textarea:focus { outline: none; border-color: var(--terracotta); }
+  .field textarea { resize: vertical; min-height: 110px; }
+  .pills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .pills label { position: relative; cursor: pointer; }
+  .pills input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .pills span {
+    display: inline-block; padding: 10px 18px; font-size: 14px; color: var(--navy);
+    border: 1px solid var(--grey-300); background: var(--paper); transition: all 0.2s ease;
+  }
+  .pills label:hover span { border-color: var(--navy); }
+  .pills input:checked + span { background: var(--navy); color: var(--cream); border-color: var(--navy); }
+  .pills input:focus-visible + span { outline: 2px solid var(--terracotta); outline-offset: 2px; }
+  .enquiry-submit {
+    align-self: flex-start; margin-top: 6px; padding: 16px 36px; font-size: 12px;
+    letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; cursor: pointer;
+    background: transparent; color: var(--navy); border: 1px solid var(--navy); transition: all 0.3s ease;
+  }
+  .enquiry-submit:hover { background: var(--navy); color: var(--cream); }
+  .enquiry-submit:disabled { opacity: 0.5; cursor: default; }
+  .enquiry-note { font-size: 13px; color: var(--grey-500); line-height: 1.6; margin: 2px 0 0; }
+  .enquiry-note a { color: var(--terracotta); }
+  .enquiry-error { color: #9b2c2c; font-size: 14px; margin-top: 10px; }
+  .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+  .enquiry-success { text-align: center; padding: 32px 0; }
+  .enquiry-success h3 { font-family: var(--serif); font-size: 28px; color: var(--navy); margin: 0 0 12px; font-weight: 500; }
+  .enquiry-success p { font-size: 17px; color: var(--grey-700); margin: 0; }
 </style>
 
   <!-- ===== Favicon + Open Graph ===== -->
@@ -523,6 +579,97 @@
     </div>
   </div>
 </section>
+
+<!-- ENQUIRY -->
+<section class="enquiry" id="enquiry">
+  <div class="enquiry-inner">
+    <div class="enquiry-eyebrow">Rather write than ring?</div>
+    <h2 class="enquiry-title">Tell me about <em>your situation.</em></h2>
+    <p class="enquiry-sub">Send me the details and I'll come back to you personally. Only your email is needed; the rest just helps me give you a useful first steer. Reading the handbook costs you nothing, and neither does an initial conversation.</p>
+
+    <form class="enquiry-form" id="enquiryForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="31c31e3e-5963-495e-9c7a-9afec05c9195">
+      <input type="hidden" name="subject" value="New handbook enquiry from rhcharteredsurveyors.co.uk">
+      <input type="hidden" name="from_name" value="RHCS Handbook Page">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="field">
+        <label for="ef-name">Your name <span class="opt">(optional)</span></label>
+        <input type="text" id="ef-name" name="name" autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="ef-email">Email <span class="req">(required)</span></label>
+        <input type="email" id="ef-email" name="email" autocomplete="email" required>
+      </div>
+
+      <div class="field">
+        <span class="field-label">I'm a <span class="opt">(optional)</span></span>
+        <div class="pills">
+          <label><input type="radio" name="role" value="Tenant"><span>Tenant</span></label>
+          <label><input type="radio" name="role" value="Landlord"><span>Landlord</span></label>
+          <label><input type="radio" name="role" value="Owner-occupier"><span>Owner-occupier</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Property type <span class="opt">(optional)</span></span>
+        <div class="pills">
+          <label><input type="radio" name="property" value="Industrial"><span>Industrial</span></label>
+          <label><input type="radio" name="property" value="Office"><span>Office</span></label>
+          <label><input type="radio" name="property" value="Retail"><span>Retail</span></label>
+          <label><input type="radio" name="property" value="Other"><span>Other</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ef-issue">What's the situation? <span class="opt">(optional)</span></label>
+        <textarea id="ef-issue" name="issue" placeholder="A line or two on what you're dealing with."></textarea>
+      </div>
+
+      <button type="submit" class="enquiry-submit">Send enquiry</button>
+      <p class="enquiry-note">I'll only use these details to reply to your enquiry, nothing else. See my <a href="privacy.html">privacy policy</a>.</p>
+    </form>
+
+    <div class="enquiry-success" id="enquirySuccess" hidden>
+      <h3>Thanks, that's with me.</h3>
+      <p>I'll come back to you personally, usually within a working day.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var form = document.getElementById('enquiryForm');
+    if(!form) return;
+    var success = document.getElementById('enquirySuccess');
+    var btn = form.querySelector('.enquiry-submit');
+    function showError(msg){
+      var e = form.querySelector('.enquiry-error');
+      if(!e){ e = document.createElement('p'); e.className = 'enquiry-error'; form.appendChild(e); }
+      e.textContent = msg;
+    }
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      if(form.querySelector('[name="botcheck"]').checked) return;
+      var email = form.querySelector('[name="email"]');
+      if(!email.value){ email.focus(); return; }
+      btn.disabled = true; btn.textContent = 'Sending...';
+      fetch('https://api.web3forms.com/submit', { method:'POST', body: new FormData(form) })
+        .then(function(r){ return r.json(); })
+        .then(function(json){
+          if(json.success){
+            form.hidden = true; success.hidden = false;
+            success.scrollIntoView({behavior:'smooth', block:'center'});
+          } else {
+            showError('Could not send just now. Please email me at rob@rhcharteredsurveyors.co.uk.');
+          }
+        })
+        .catch(function(){ showError('Could not send just now. Please email me at rob@rhcharteredsurveyors.co.uk.'); })
+        .finally(function(){ btn.disabled = false; btn.textContent = 'Send enquiry'; });
+    });
+  })();
+</script>
 
 <!-- FOOTER -->
 <footer class="footer">
