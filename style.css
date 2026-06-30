@@ -237,6 +237,37 @@
     opacity: 0.5;
   }
 
+  /* Social icons (footer, site-wide) */
+  .footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(245, 241, 235, 0.25);
+    color: var(--paper);
+    opacity: 0.75;
+    transition: all 0.3s ease;
+  }
+  .footer-social a:hover {
+    background: var(--terracotta);
+    border-color: var(--terracotta);
+    color: var(--navy-deep);
+    opacity: 1;
+  }
+  .footer-social svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    display: block;
+  }
+
 
 /* ============================================================================
    4. CTA (inner pages)
